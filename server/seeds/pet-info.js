@@ -418,9 +418,9 @@
   
   {
     name: "Andrew",
-    description: "Crested gecko. Loves to climb and leap into the abyss.",
-    category: "Reptiles",
-    location: "Whitehorse",
+    description: "Quirky parrot. Prefers not to sit on your hand",
+    category: "Bird",
+    location: "Halifax",
     answers: [
       {
         [ activity: "very low", 
