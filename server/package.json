@@ -1,0 +1,33 @@
+{
+  "name": "pet-matcher",
+  "version": "1.0.0",
+  "description": "An interactive full-stack MERN application, where users can match with potential pets who are up for adoption.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felicitybrammer/pet-matcher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felicitybrammer/pet-matcher/issues"
+  },
+  "homepage": "https://github.com/felicitybrammer/pet-matcher#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.6.2",
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.2",
+    "graphql": "^16.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
