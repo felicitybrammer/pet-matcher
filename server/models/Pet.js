@@ -18,12 +18,6 @@ const petSchema = new Schema(
         unique: true,
         trim: true
       },
-      category:{
-        type: String,
-        required: true,
-        unique: true,
-        trim: true
-      },
       location:{
         type: String,
         required: true,
