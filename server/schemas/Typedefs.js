@@ -22,11 +22,11 @@ const typeDefs = gql`
   type Quiz {
     _id: ID
     gender: String
-    age: Array
-    category: Array
+    age: [String]
+    category: [String]
     activity: String
     needs: Boolean
-    household: Array
+    household: [String]
     otherPets: Boolean
   }
 
@@ -39,7 +39,7 @@ const typeDefs = gql`
     me: User
     pet(_id:ID!): Pet
     pets: [Pet]
-    category(category: Array): Quiz
+    category(category: [String]): Quiz
     
   }
 
@@ -52,11 +52,11 @@ const typeDefs = gql`
   input inputQuiz {
     _id: ID
     gender: String
-    age: Array
-    category: Array
+    age: [String]
+    category: [String]
     activity: String
     needs: Boolean
-    household: Array
+    household: [String]
     otherPets: Boolean
   }
   
