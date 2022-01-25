@@ -1,0 +1,494 @@
+[
+    {
+        "name": "Brody",
+        "description": "Very lumpy (cuz he is so full of love)",
+        "image":"../../client/pet-images/Brody.jpeg",
+        "location": "Vancouver",
+        "answers": [
+        {   "gender": "male",
+            "age": "senior",
+            "category":"Dog",
+            "activity": "low",
+            "needs": "true", 
+            "household": "adults", 
+            "other pets":  "true"
+            }
+        ]
+    },
+    {
+    "name": "Keelah",
+    "description": "Miami street dog. Speedy and snuggly.",
+    "image":"../../client/pet-images/Keelah.jpeg",
+    "location": "Vancouver",
+    "answers": [
+        {   
+            "gender": "female",
+            "age": "senior",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adults",  
+            "other pets": "true"
+        }
+    ]
+    },
+    {
+        "name": "Bishop",
+        "description": "Teaching the baby his ways of getting taxes (snacks)... ",
+        "image":"../../client/pet-images/Bishop.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Dog",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "baby",  
+            "other pets": "false"
+            }
+        ]
+    },
+    {
+        "name": "Frankie",
+        "description": "French Bulldog Collie cross loves swimming and cuddles",
+        "image":"../../client/pet-images/Frankie.jpeg",
+        "location": "Elgin",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "young adult",
+            "category":"Dog",
+            "activity": "high", 
+            "needs": "false", 
+            "household": ["baby", "child"],  
+            "other pets": "false"
+            }
+        ]
+    },
+    {
+        "name": "Shylah",
+        "description": "Registered service dog. Husky cross. Very sweet yet also very shy. Likes to backtalk",
+        "image":"../../client/pet-images/Shylah.jpeg",
+        "location": "Nanaimo",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "adult",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "false"
+            }
+        ]
+    },
+    {
+        "name": "Seren",
+        "description": "Cockapoo loves everything except cats!",
+        "image":"../../client/pet-images/Seren.jpeg",
+        "location": "Pembroke",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "adult",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "false"
+            }
+        ]
+    },
+    {
+        "name": "Paris",
+        "description": "Cockapoo loves being a lap dog",
+        "image":"../../client/pet-images/Paris.jpeg",
+        "location": "Pembroke",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "baby",
+            "category":"Dog",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Sister Cat",
+        "description": "a stone cold killer in fluffy pantaloons, parkour master, international jewel thief, fan of licking most of the butter off your toast.",
+        "image":"../../client/pet-images/Sister6.jpeg",
+        "location": "Victoria",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "adult",
+            "category":"Cat",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Brother Cat",
+        "description": "as wide eyed and sincere as his sister is sinister. Basically a yellow lab puppy in a snazzy ginger suit. So handsome. Kinda of a Himbo. Stands beside you while you're cooking and gently takes snacks off the counter with his paws.",
+        "image":"../../client/pet-images/Brother5.jpeg",
+        "location": "Victoria",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Cat",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Sabine",
+        "description": "the Goblin Queen. AKA Sharkberry. Sharpest kitten in existence. Insists on being domesticated. Has zero space boundaries and will steal the croissant right out of your hands. Unexpectedly affectionate, often while looking disgusted with you.",
+        "image":"../../client/pet-images/Sabine.jpeg",
+        "location": "Victoria",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "young adult",
+            "category":"Cat",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Greg",
+        "description": "Lovable scoundrel",
+        "image":"../../client/pet-images/Greg.jpeg",
+        "location": "Nelson",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Marty",
+        "description": "English Bulldog and likely Boxer mixed, 8 yrs old, deaf from birth, knows sign language, loves bum scratches, arm chair snuggles and destroying stuffies. Very food motivated.",
+        "image":"../../client/pet-images/Marty.jpeg",
+        "location": "Vancouver",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Dog",
+            "activity": "low", 
+            "needs": "true", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Pippa",
+        "description": "Pippa, English Bulldog,  was born with Spina Bifida, is incontinent, will be a diaper baby for life, very vocal when she wants attention (especially when she wants her diaper changed), loves to eat momma’s expensive shoes, runs very fast (especially after being caught eating momma’s expensive shoes).",
+        "image":"../../client/pet-images/Pippa.jpeg",
+        "location": "Vancouver",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "young adult",
+            "category":"Dog",
+            "activity": "low", 
+            "needs": "true", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "George",
+        "description": "pug cross. He loves deep snow, cheese, and occupying as much of the sofa as he can. He is a sucker for a good chin scratch.",
+        "image":"../../client/pet-images/George.jpeg",
+        "location": "Ottawa",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "senior",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "baby",  
+            "other pets": "false"
+            }
+        ]
+    },
+    {
+        "name": "Merrick",
+        "description": "loves people - especially young people! Merrick (Rottie) is super gentle and just wants butt scratches. Walks, tug play and good dog bones preferred!",
+        "image":"../../client/pet-images/Merrick-Pip.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "senior",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Pip",
+        "description": "loves people - especially young people! Pip (Mini Schnauzer) is mostly a one person dog but will tolerate loving ‘smooches’. Walks, tug play and good dog bones preferred!",
+        "image":"../../client/pet-images/Merrick-Pip.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "senior",
+            "category":"Dog",
+            "activity": "moderate", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Koda",
+        "description": "outgoing, loves bananas, hates the crate, perfect date would be chasing each other through the woods before sharing a swampy dip in the local pond",
+        "image":"../../client/pet-images/Koda.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "baby",
+            "category":"Dog",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "false"
+            }
+        ]
+    },
+    {
+        "name": "",
+        "description": "",
+        "image":"../../client/pet-images/.jpeg",
+        "location": "",
+        "answers": [
+        {   
+            "gender": "",
+            "age": "",
+            "category":"",
+            "activity": "", 
+            "needs": "", 
+            "household": "",  
+            "other pets": ""
+            }
+        ]
+    },
+    {
+        "name": "Sam",
+        "description": "Ex-sled dog. Alaskan husky. Very active and sweet. Loves to run and roll in snow. Submissive around other dogs. Unsure about children. A cheese stealer.",
+        "image":"../../client/pet-images/Sam2.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Dog",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Mia",
+        "description": "Sedentary senior who loves to sleep on heated blankets all day. Solar powered.",
+        "image":"../../client/pet-images/Mia.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "senior",
+            "category":"Cat",
+            "activity": "low", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Emma",
+        "description": "Crested gecko. Loves to climb and leap into the abyss.",
+        "image":"../../client/pet-images/Emma.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "senior",
+            "category":"Reptile",
+            "activity": "low", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Lou",
+        "description": "Lou enjoys escaping, exploring inconvenient places, playing hide-and-seek (for months, if possible), and committing wanton acts of destruction. Enthusiastic but terrible climber. Approximately 15 years old.",
+        "image":"../../client/pet-images/Lou2.jpeg",
+        "location": "Whitehorse",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Reptile",
+            "activity": "low", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Sven",
+        "description": "Sweet polydactyle ginger cat. Loves to sleep on shoulders",
+        "image":"../../client/pet-images/SvenDouglas.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Cat",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Douglas Fur",
+        "description": "A barn rescue. Very food motivated",
+        "image":"../../client/pet-images/DouglasFur.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "young adult",
+            "category":"Cat",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Jerome",
+        "description": "Terrier rescue. Very sweet and shy. Hates cold weather",
+        "image":"../../client/pet-images/Jerome.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "young adult",
+            "category":"Dog",
+            "activity": "high", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Dick",
+        "description": "Opinionated cockatiel. Loves to tear up cardboard and shriek. Will dance along to Dolly Parton.",
+        "image":"../../client/pet-images/Dick.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Bird",
+            "activity": "high", 
+            "needs": "true", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Andrew",
+        "description": "Quirky parrot. Prefers not to sit on your hand",
+        "image":"../../client/pet-images/Andrew.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "male",
+            "age": "adult",
+            "category":"Bird",
+            "activity": "low", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Gayle",
+        "description": "Shy and quiet. Doesn't like to be caged.",
+        "image":"../../client/pet-images/Gayle.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "senior",
+            "category":"Bird",
+            "activity": "low", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    },
+    {
+        "name": "Frankie",
+        "description": "Princess parrot who loves to sit on your head",
+        "image":"../../client/pet-images/FrankieBird.jpeg",
+        "location": "Halifax",
+        "answers": [
+        {   
+            "gender": "female",
+            "age": "adult",
+            "category":"Bird",
+            "activity": "low", 
+            "needs": "false", 
+            "household": "adult",  
+            "other pets": "true"
+            }
+        ]
+    }
+]
