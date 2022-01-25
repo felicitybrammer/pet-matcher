@@ -20,12 +20,12 @@ const userSchema = new Schema(
         required: true,
         minlength: 5
       },
-      answers: [
+      answers: 
         {
             type: Schema.Types.ObjectId,
             ref: 'Quiz'
-          }
-      ],
+        } 
+      ,
       favourites: [
         {
             type: Schema.Types.ObjectId,
