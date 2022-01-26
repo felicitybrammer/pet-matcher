@@ -37,6 +37,16 @@ const resolvers = {
     
           return { token, user };
         },
+        addPet: async(parent, args) => {
+          const pet = await Pet.create(args);
+
+          return pet;
+        },
+        addQuiz: async(parent, args) => {
+          const quiz = await Quiz.create(args);
+          
+          return quiz;
+        },
         login: async (parent, { email, password }) => {
           const user = await User.findOne({ email });
     

@@ -5,7 +5,7 @@ const petSchema = new Schema(
       name: {
         type: String,
         required: true,
-        unique: true,
+
         trim: true
       },
       description:{
@@ -15,12 +15,13 @@ const petSchema = new Schema(
       image:{
         type: String,
         required: true,
-        unique: true,
+        
         trim: true
       },
       location:{
         type: String,
         required: true,
+        
         trim: true
       },
       answers: [
