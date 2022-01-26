@@ -104,7 +104,7 @@
         "name": "Paris",
         "description": "Cockapoo loves being a lap dog",
         "image":"../../client/pet-images/Paris.jpeg",
-        "location": "Pembroke",
+        "location": "Cardiff",
         "answers": [
         {   
             "gender": "female",
