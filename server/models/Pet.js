@@ -21,7 +21,6 @@ const petSchema = new Schema(
       location:{
         type: String,
         required: true,
-        unique: true,
         trim: true
       },
       answers: [
