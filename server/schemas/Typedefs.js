@@ -35,6 +35,17 @@ const typeDefs = gql`
     user: User
   }
 
+  input inputQuiz {
+    _id: ID
+    gender: String
+    age: [String]
+    category: [String]
+    activity: String
+    needs: Boolean
+    household: [String]
+    otherPets: Boolean
+  }
+
   type Query {
     me: User
     pet(_id:ID!): Pet
@@ -46,20 +57,10 @@ const typeDefs = gql`
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(name: String!, email: String!, password: String!): Auth
+    addPet(name: String!, description: String, image: String, location: String, gender: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): Pet
+    addQuiz(gender: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): Quiz
     updateQuiz(input: inputQuiz): User
   }
-
-  input inputQuiz {
-    _id: ID
-    gender: String
-    age: [String]
-    category: [String]
-    activity: String
-    needs: Boolean
-    household: [String]
-    otherPets: Boolean
-  }
-  
 `;
 
 module.exports = typeDefs;
