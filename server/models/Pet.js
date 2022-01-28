@@ -25,7 +25,7 @@ const petSchema = new Schema(
         trim: true
       },
 
-        gender: {
+        sex: {
           type: String,
           
           trim: true
