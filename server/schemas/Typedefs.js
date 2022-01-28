@@ -33,7 +33,7 @@ const typeDefs = gql`
     token: ID!
     user: User
   }
-  
+
   input inputQuiz {
     _id: ID
     gender: String
@@ -70,9 +70,6 @@ const typeDefs = gql`
     addQuiz(gender: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): Quiz
     updateQuiz(input: inputQuiz): User
   }
-
-  
-  
 `;
 
 module.exports = typeDefs;
