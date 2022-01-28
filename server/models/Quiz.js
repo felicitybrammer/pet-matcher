@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const quizSchema = new Schema(
     {
-      gender: {
+      sex: {
         type: String,
         
         trim: true
@@ -33,7 +33,7 @@ const quizSchema = new Schema(
         trim: true
       },
       otherPets: {
-        type: Boolean,
+        type: Boolean,                                                                        
         
         trim: true
       }

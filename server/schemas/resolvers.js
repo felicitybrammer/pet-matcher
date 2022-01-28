@@ -19,14 +19,14 @@ const resolvers = {
         pets: async () => {
           return Pet.find()
             .select('-__v')
-            .populate('answers');
+            // .populate('answers');
         },
         pet: async (parent, { _id }) => {
           return Pet.findOne({ _id })
             .select('-__v')
-            .populate('answers');
+            // .populate('answers');
         },
-        // category: 
+        
         
     },
     
@@ -42,9 +42,15 @@ const resolvers = {
 
           return pet;
         },
-        addQuiz: async(parent, args) => {
-          const quiz = await Quiz.create(args);
-          
+        addQuiz: async(parent, args, context) => {
+          console.log(args);
+
+          const quiz = await Quiz.create( {...args,name: 'Sam'});
+          await User.findByIdAndUpdate(
+            { _id: "61f3469a46eaafc1d58a9e65" },
+            { $push: { answers: quiz._id } },
+            { new: true }
+          ); 
           return quiz;
         },
         login: async (parent, { email, password }) => {
@@ -63,15 +69,16 @@ const resolvers = {
           const token = signToken(user);
           return { token, user };
         },
-        updateQuiz: async(parent, { input }, context) => {
+        updateQuiz: async(parent, args, context) => {
             if (context.user) {
-            const updatedUser = await User.findByIdAndUpdate(
-                { _id: context.user._id },
-                { $addToSet: { answers: input._id } },
-                { new: true }
 
-            );
-            return updatedUser; 
+              const updatedUser = await Quiz.findOneAndUpdate(
+                  { _id: quiz._id},
+                  { $addToSet: { answers: args } },
+                  { new: true }
+
+              );
+              return updatedUser; 
             }     
             throw new AuthenticationError('You need to be logged in!');  
         },
