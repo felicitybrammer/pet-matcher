@@ -24,12 +24,44 @@ const petSchema = new Schema(
         
         trim: true
       },
-      answers: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Quiz'
-          }
-      ]
+
+        gender: {
+          type: String,
+          
+          trim: true
+        },
+        age: {
+          type: Array,
+          
+          trim: true
+        },
+        category: {
+          type: Array,
+          
+          trim: true
+        },
+        activity: {
+          type: String,
+          
+          trim: true
+        },
+        needs: {
+          type: Boolean,
+         
+          trim: true
+        },
+        household: {
+          type: Array,
+         
+          trim: true
+        },
+        otherPets: {
+          type: Boolean,
+          
+          trim: true
+        }
+        
+      
     })
 
     const Pet = model('Pet', petSchema);
