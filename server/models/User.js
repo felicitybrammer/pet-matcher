@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const quizSchema = require('./Quiz');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
@@ -20,12 +21,7 @@ const userSchema = new Schema(
         required: true,
         minlength: 5
       },
-      answers: 
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Quiz'
-}
-      ,
+      answers: [quizSchema],
       favourites: [
         {
             type: Schema.Types.ObjectId,

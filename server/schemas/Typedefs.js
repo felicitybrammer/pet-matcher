@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID
     name: String
     email: String
-    answers: Quiz
+    answers: [Quiz]
     favourites: [Pet]
     }
 
@@ -50,6 +50,7 @@ const typeDefs = gql`
     household: [String]
     otherPets: Boolean
   }
+
   type Query {
     me: User
     pet(_id:ID!): Pet
@@ -62,7 +63,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(name: String!, email: String!, password: String!): Auth
     addPet(name: String!, description: String, image: String, location: String, sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): Pet
-    addQuiz(sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): Quiz
+    addQuiz(sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): User
     updateQuiz(_id:ID!, sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): User
   }
 `;

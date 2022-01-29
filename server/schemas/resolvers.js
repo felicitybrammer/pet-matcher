@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { UniqueTypeNamesRule } = require('graphql');
-const { User, Pet, Quiz } = require('../models');
+const { User, Pet } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -27,14 +27,14 @@ const resolvers = {
             .select('-__v')
             // .populate('answers');
         },
-        quizes: async () => {
-          return Quiz.find()
-          .select('-__v')
-        },
-        quiz: async (parent, {_id}) => {
-          return Quiz.findOne({_id})
-          .select('-__v')
-        },
+        // quizes: async () => {
+        //   return Quiz.find()
+        //   .select('-__v')
+        // },
+        // quiz: async (parent, {_id}) => {
+        //   return Quiz.findOne({_id})
+        //   .select('-__v')
+        // },
         
     },
     
@@ -50,18 +50,14 @@ const resolvers = {
 
           return pet;
         },
-        addQuiz: async(parent, args, context) => {
-          console.log(args);
-
-          const quiz = await Quiz.create(args);
-
-          await User.findByIdAndUpdate(
+        addQuiz: async(parent, { sex, age, category, activity, needs, household, otherPets}, context) => {
+          const updateUser = await User.findByIdAndUpdate(
             { _id: context.user._id },
-            { $push: { answers: quiz._id } },
+            { $push: { answers: { sex, age, category, activity, needs, household, otherPets} } },
             { new: true }
           );
 
-          return quiz;
+          return updateUser;
         },
         login: async (parent, { email, password }) => {
           const user = await User.findOne({ email });
@@ -84,7 +80,7 @@ const resolvers = {
 
               const updatedUser = await User.findOneAndUpdate(
                   { _id:context.user._id},
-                  { $addToSet: { answers: context.quiz.args } },
+                  { $addToSet: { answers: {sex, age, category, activity, needs, household, otherPets} } },
                   { new: true }
 
               );
