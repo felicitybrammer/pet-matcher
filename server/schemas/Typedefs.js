@@ -44,7 +44,7 @@ const typeDefs = gql`
 
   input inputQuiz {
     _id: ID
-    gender: String
+    sex: String
     age: [String]
     category: [String]
     activity: String

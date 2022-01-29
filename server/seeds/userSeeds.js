@@ -41,7 +41,7 @@ db.once('open', async () => {
   for (let i = 0; i < 100; i += 1) {
     //const thoughtText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
 
-    const gender = () => {
+    const sex = () => {
         const num = Math.floor((Math.random() * 2) + 1);
         if (num === '1') {
             return 'female';
@@ -114,7 +114,7 @@ db.once('open', async () => {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { name, _id: userId } = createdUsers.ops[randomUserIndex];
 
-    const quizAnswers = await Quiz.create({ gender, age, category, activity, needs, household, otherPets });
+    const quizAnswers = await Quiz.create({ sex, age, category, activity, needs, household, otherPets });
 
     const updatedUser = await User.updateOne(
       { _id: userId },

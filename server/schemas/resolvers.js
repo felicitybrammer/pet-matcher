@@ -45,12 +45,14 @@ const resolvers = {
         addQuiz: async(parent, args, context) => {
           console.log(args);
 
-          const quiz = await Quiz.create( {...args,name: 'Sam'});
+          const quiz = await Quiz.create(args);
+
           await User.findByIdAndUpdate(
-            { _id: "61f3469a46eaafc1d58a9e65" },
+            { _id: context.user._id },
             { $push: { answers: quiz._id } },
             { new: true }
-          ); 
+          );
+
           return quiz;
         },
         login: async (parent, { email, password }) => {
