@@ -1,4 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
+const { UniqueTypeNamesRule } = require('graphql');
 const { User, Pet, Quiz } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -26,7 +27,14 @@ const resolvers = {
             .select('-__v')
             // .populate('answers');
         },
-        
+        quizes: async () => {
+          return Quiz.find()
+          .select('-__v')
+        },
+        quiz: async (parent, {_id}) => {
+          return Quiz.findOne({_id})
+          .select('-__v')
+        },
         
     },
     
@@ -74,9 +82,9 @@ const resolvers = {
         updateQuiz: async(parent, args, context) => {
             if (context.user) {
 
-              const updatedUser = await Quiz.findOneAndUpdate(
-                  { _id: quiz._id},
-                  { $addToSet: { answers: args } },
+              const updatedUser = await User.findOneAndUpdate(
+                  { _id:context.user._id},
+                  { $addToSet: { answers: context.quiz.args } },
                   { new: true }
 
               );

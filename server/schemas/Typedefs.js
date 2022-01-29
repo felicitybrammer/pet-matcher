@@ -40,8 +40,6 @@ const typeDefs = gql`
     user: User
   }
 
-  
-
   input inputQuiz {
     _id: ID
     sex: String
@@ -56,8 +54,8 @@ const typeDefs = gql`
     me: User
     pet(_id:ID!): Pet
     pets: [Pet]
-    category(category: [String]): Quiz
-    
+    quizes: [Quiz]
+    quiz(_id:ID!): Quiz
   }
 
   type Mutation {
