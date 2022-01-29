@@ -75,20 +75,30 @@ const resolvers = {
           const token = signToken(user);
           return { token, user };
         },
-        updateQuiz: async(parent, args, context) => {
+        updateQuiz: async(parent, args , context) => {
             if (context.user) {
 
               const updatedUser = await User.findOneAndUpdate(
                   { _id:context.user._id},
-                  { $addToSet: { answers: {sex, age, category, activity, needs, household, otherPets} } },
+                  { $pull: { answers: {sex: context.user.sex, age: context.user.age, category: context.user.category, activity: context.user.activity, needs: context.user.needs, household: context.user.household, otherPets: context.user.otherPets}}},
+                  
                   { new: true }
+              )
+              
+              User.findOneAndUpdate(
+                { _id:context.user._id},
+                { $addToSet: { answers: args } },
+                { new: true }
+              )
+              return updatedUser;
 
-              );
-              return updatedUser; 
-            }     
+
+              
+          
             throw new AuthenticationError('You need to be logged in!');  
-        },
+        }
     }
+  } 
 };
 
 module.exports = resolvers;
