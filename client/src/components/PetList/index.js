@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 const PetList = ({ name, age, image, sex }) => {
     if (!pets.length) {
-        return <h3>No pets yet!</h3>;
+        return <h3>No Pets yet!</h3>;
     }
     return (
         <div>
@@ -25,4 +25,4 @@ const PetList = ({ name, age, image, sex }) => {
     )
 }
 
-export default PetList
+export default PetList;
