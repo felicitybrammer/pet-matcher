@@ -19,3 +19,22 @@ query pets{
 }
 
 `;
+
+export const QUERY_PET = gql `
+    query pet($_id: ID!) {
+        pet(_id: $_id) {
+            name
+            description
+            image
+            location
+              sex
+              age
+              category
+              activity
+              needs
+              household
+              otherPets
+            
+          }  
+    }
+`;

@@ -33,8 +33,8 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile/:name?" component={UserProfile} />
-              {/* 
-              <Route exact path="/pet/{pet.name}" component={PetProfile} /> */}
+              
+              {/* <Route exact path="/pet/{pet.name}" component={PetProfile} />  */}
               
               <Route component={NoMatch} />
             </Switch>  

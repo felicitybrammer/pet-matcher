@@ -1,10 +1,14 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import { useQuery } from '@apollo/client'
+// import { QUERY_PETS } from '../utils/queries';
 
 
 const PetList = ({ name, age, image, sex }) => {
+    //const { loading, data } = useQuery(QUERY_PETS);
+    
     // if (!pets.length) {
     //     return <h3>No pets yet!</h3>;
     // }
@@ -27,7 +31,7 @@ const PetList = ({ name, age, image, sex }) => {
                 {/* add this code to post a link to pet's profile
             <p className="card-header">
                 <Link
-                    to={`/profile/${pet.name}`}
+                    to={`/pet/${pet.name}`}
                     style={{ fontWeight: 700 }}
                     className="text-light"
                 >
