@@ -1,6 +1,10 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+// import { Link } from 'react-router-dom';
+// import { useQuery } from '@apollo/client'
+// import { QUERY_PETS } from '../utils/queries';
+
 
 const PetList = ({ pets, pet }) => {
     if (!pets.length) {
@@ -20,7 +24,18 @@ const PetList = ({ pets, pet }) => {
                         </Card.Text>
                         <Button variant="primary">See {pet.name}'s profile</Button>
                     </Card.Body>
-                </Card>))}
+                </Card>))} */
+
+                {/* add this code to post a link to pet's profile
+            <p className="card-header">
+                <Link
+                    to={`/pet/${pet.name}`}
+                    style={{ fontWeight: 700 }}
+                    className="text-light"
+                >
+                    {pet.name}
+                </Link>
+            </p> */}
         </div>
     )
 }
