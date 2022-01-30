@@ -9,7 +9,7 @@ function Navbar() {
                 {' '}
                 <FontAwesomeIcon icon={faCode} />
             </span>
-            <h1>App Title</h1>
+            <h1>OkCreature</h1>
         </header>
     )
 }
