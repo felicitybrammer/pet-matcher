@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Quiz from './components/QuizModal';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -19,6 +20,7 @@ function App() {
 
     <div>
       <Navbar></Navbar>
+      <Quiz></Quiz>
       <Footer></Footer>
     </div>
     </ApolloProvider>
