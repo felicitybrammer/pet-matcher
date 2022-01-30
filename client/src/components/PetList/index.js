@@ -1,14 +1,16 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+
 
 const PetList = ({ name, age, image, sex }) => {
-    if (!pets.length) {
-        return <h3>No pets yet!</h3>;
-    }
+    // if (!pets.length) {
+    //     return <h3>No pets yet!</h3>;
+    // }
     return (
         <div>
-            {pet &&
+            {/* {pet &&
                 pets.map((pet) => (
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="holder.js/100px180" />
@@ -20,7 +22,18 @@ const PetList = ({ name, age, image, sex }) => {
                         </Card.Text>
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
-                </Card>))}
+                </Card>))} */}
+
+                {/* add this code to post a link to pet's profile
+            <p className="card-header">
+                <Link
+                    to={`/profile/${pet.name}`}
+                    style={{ fontWeight: 700 }}
+                    className="text-light"
+                >
+                    {pet.name}
+                </Link>
+            </p> */}
         </div>
     )
 }
