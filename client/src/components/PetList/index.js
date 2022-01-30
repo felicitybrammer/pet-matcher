@@ -2,27 +2,27 @@ import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const PetList = ({ name, age, image, sex }) => {
+const PetList = ({ pets, pet }) => {
     if (!pets.length) {
         return <h3>No pets yet!</h3>;
     }
     return (
         <div>
-            {pet &&
+            {pets &&
                 pets.map((pet) => (
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                <Card key={pet._id} style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src=""/>
                     <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
+                        <Card.Title>Hi, I'm {pet.name}</Card.Title>
                         <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
+                            {pet.sex}
+                            {pet.age}
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary">See {pet.name}'s profile</Button>
                     </Card.Body>
                 </Card>))}
         </div>
     )
 }
 
-export default PetList
+export default PetList;

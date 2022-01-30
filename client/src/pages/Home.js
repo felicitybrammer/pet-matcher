@@ -9,7 +9,11 @@ const Home = () => {
     console.log(pets);
     return (
         <main>
-            <PetList></PetList>
+            {loading ? (
+        <div>Loading...</div>
+      ) : (
+            <PetList pets={pets} />
+      )}
         </main>
     )
     
