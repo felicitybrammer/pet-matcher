@@ -21,7 +21,6 @@ const PetList = ({ name, age, image, sex }) => {
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>))}
-
         </div>
     )
 }
