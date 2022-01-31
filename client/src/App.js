@@ -2,11 +2,7 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-<<<<<<< HEAD
-import NavBar from './components/Navbar';
-=======
 import Nav from './components/Navbar';
->>>>>>> 52b0cc4cc2e591e5c6d8b0e01fecb4832eba0e2f
 import HomeDash from './pages/HomeDash';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
