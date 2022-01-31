@@ -4,6 +4,7 @@ import { QUERY_PETS } from '../../utils/queries';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import PetList from '../PetList';
+import Quiz from '../QuizModal';
 
 const Dashboard = () => {
     const { loading, data } = useQuery(QUERY_PETS);
@@ -23,10 +24,10 @@ const Dashboard = () => {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-modal-sizes-title-lg">
-                        Large Modal
+                        Find your perfect new best friend!
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>...</Modal.Body>
+                <Modal.Body><Quiz /></Modal.Body>
             </Modal>
 
             {loading ? (
