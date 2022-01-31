@@ -2,7 +2,7 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
+import NavBar from './components/Navbar';
 import HomeDash from './pages/HomeDash';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -36,7 +36,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
       <div className="flex-column justify-flex-start min-100-vh">
-          <Navbar />
+          <NavBar />
           <div className="container">
             <Switch>
               <Route exact path="/" component={HomeDash} />

@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.nav{
+  background-color: #2bb7d0;
+}
+.link{
+  text-decoration: none;
+  color: white;
+}
+.title{
+  color: white;
+	font-size: 45px;
+	-webkit-text-stroke: 1px #ff824c;
+}
+
+/* orange #ff824c
+blue #2bb7d0
+yellow #f5cb39 */
