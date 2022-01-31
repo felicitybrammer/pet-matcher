@@ -85,8 +85,4 @@ const NavBar = () => {
     )
 }
 
-<<<<<<< HEAD
 export default NavBar;
-=======
-export default Nav;
->>>>>>> 52b0cc4cc2e591e5c6d8b0e01fecb4832eba0e2f
