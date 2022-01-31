@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { QUERY_PETS } from '../utils/queries';
+import { QUERY_PETS } from '../../utils/queries';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import PetList from '../components/PetList';
+import PetList from '../PetList';
 
 const Dashboard = () => {
     const { loading, data } = useQuery(QUERY_PETS);
