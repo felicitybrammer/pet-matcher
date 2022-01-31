@@ -41,3 +41,8 @@
   text-decoration: none;
   color: white;
 }
+
+.navButton{
+  display: flex;
+  align-items: flex-end;
+}
