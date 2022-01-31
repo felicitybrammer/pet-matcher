@@ -15,11 +15,12 @@ const PetList = ({ pets, pet }) => {
             {pets &&
                 pets.map((pet) => (
                 <Card key={pet._id} style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src=""/>
+                    <Card.Img variant="top" src="{require(`../../assets/images/pet-images/${pet.image}`)}"/>
                     <Card.Body>
                         <Card.Title>Hi, I'm {pet.name}</Card.Title>
                         <Card.Text>
                             {pet.sex}
+                            <br/>
                             {pet.age}
                         </Card.Text>
                         <Button variant="primary">See {pet.name}'s profile</Button>
