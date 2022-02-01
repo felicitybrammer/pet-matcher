@@ -119,22 +119,71 @@ const Quiz = () => {
                 break;
         }
         console.log(quizAnswers)//THIS WORKS!!!! logs an object of object
-        return quizAnswers; 
+        return quizAnswers;
     }
+
+    const resultSex = Object.keys(quizAnswers.sex)
+        .reduce((o, female) => {
+            quizAnswers.sex[female] == true && (o[female] = quizAnswers.sex[female]);
+
+            return o;
+        }, {});
+
+    console.log(resultSex);
+
+    const resultAge = Object.keys(quizAnswers.age)
+        .reduce((o, baby) => {
+            quizAnswers.age[baby] == true && (o[baby] = quizAnswers.age[baby]);
+            return o;
+        }, {});
+
+    console.log(resultAge);
+
+    const resultCategory = Object.keys(quizAnswers.category)
+        .reduce((o, dog) => {
+            quizAnswers.category[dog] == true && (o[dog] = quizAnswers.category[dog]);
+            return o;
+        }, {});
+
+    console.log(resultCategory);
+
+    const resultActivity = Object.keys(quizAnswers.activity)
+            .reduce((o, low) => {
+                quizAnswers.activity[low] == true && (o[low] = quizAnswers.activity[low]);
+                return o;
+            }, {});
+
+        console.log(resultActivity);
+    
+        const resultHouse = Object.keys(quizAnswers.household)
+        .reduce((o, babyHouse) => {
+            quizAnswers.household[babyHouse] == true && (o[babyHouse] = quizAnswers.household[babyHouse]);
+            return o;
+        }, {});
+
+    console.log(resultHouse);
+
+
 
     const handleFormSubmit = async event => {
         event.preventDefault();
         console.log('click')
 
-        
+
+
 
         try {
             //add quiz to database
             await addQuiz({
                 //splice out the things that are true
-                quizAnswers
+                //quizAnswers
                 // put quizAnswers in here somewhere
                 //variables: { sex, age, category, activity, needs, household, otherPets }
+
+
+
+
+
             });
             //clear form?
             setQuizAnswers({});
