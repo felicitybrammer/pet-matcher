@@ -4,19 +4,21 @@ import { ADD_QUIZ } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
 const Quiz = () => {
-    const { data: { me: {} } } = useQuery(QUERY_ME);
-    const [addQuiz, { error }] = useMutation(ADD_QUIZ, {
-        update(cache, {data: { addQuiz } }) {
-            
-            //update me object's cache
-            const {me} = cache.readQuery({ query: QUERY_ME, variables: me}); //this is null. why??
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: {...me, answers: [...me.answers, addQuiz] } }
-            });
+    // const { data: { me: {} } } = useQuery(QUERY_ME);
+    // const [addQuiz, { error }] = useMutation(ADD_QUIZ, 
+    //     {
+    //     update(cache, {data: { addQuiz } }) {
 
-        }
-    });
+    //         //update me object's cache
+    //         const {me} = cache.readQuery({ query: QUERY_ME, variables: me}); //this is null. why??
+    //         cache.writeQuery({
+    //             query: QUERY_ME,
+    //             data: { me: {...me, answers: [...me.answers, addQuiz] } }
+    //         });
+
+    //     }
+    // });
+    const [addQuiz, { error }] = useMutation(ADD_QUIZ);
     const [quizAnswers, setQuizAnswers] = useState(
         {
             sex: {
@@ -41,8 +43,7 @@ const Quiz = () => {
                 high: false
             },
             needs: {
-                needsTrue: false,
-                needsFalse: false,
+                needsTrue: false
             },
             household: {
                 babyHouse: false,
@@ -51,8 +52,7 @@ const Quiz = () => {
                 specialHouse: false
             },
             otherPets: {
-                otherTrue: false,
-                otherFalse: false
+                otherTrue: false
             }
         }
     );
@@ -101,10 +101,7 @@ const Quiz = () => {
                 setQuizAnswers((prevState) => ({ ...prevState, activity: { ...prevState.activity, high: !prevState.activity.high } }))
                 break;
             case "needsTrue":
-                setQuizAnswers((prevState) => ({ ...prevState, need: { ...prevState.need, needsTrue: !prevState.need.needsTrue } }))
-                break;
-            case "needsFalse":
-                setQuizAnswers((prevState) => ({ ...prevState, need: { ...prevState.need, needsFalse: !prevState.need.needsFalse } }))
+                setQuizAnswers((prevState) => ({ ...prevState, needs: { ...prevState.needs, needsTrue: !prevState.needs.needsTrue } }))
                 break;
             case "babyHouse":
                 setQuizAnswers((prevState) => ({ ...prevState, household: { ...prevState.household, babyHouse: !prevState.household.babyHouse } }))
@@ -120,9 +117,6 @@ const Quiz = () => {
                 break;
             case "otherTrue":
                 setQuizAnswers((prevState) => ({ ...prevState, otherPets: { ...prevState.otherPets, otherTrue: !prevState.otherPets.otherTrue } }))
-                break;
-            case "otherFalse":
-                setQuizAnswers((prevState) => ({ ...prevState, otherPets: { ...prevState.otherPets, otherFalse: !prevState.otherPets.otherFalse } }))
                 break;
             default:
                 break;
@@ -157,14 +151,14 @@ const Quiz = () => {
     //console.log(resultCategory);
 
     const resultActivity = Object.keys(quizAnswers.activity)
-            .reduce((o, low) => {
-                quizAnswers.activity[low] == true && (o[low] = quizAnswers.activity[low]);
-                return o;
-            }, {});
+        .reduce((o, low) => {
+            quizAnswers.activity[low] == true && (o[low] = quizAnswers.activity[low]);
+            return o;
+        }, {});
 
-        //console.log(resultActivity);
-    
-        const resultHouse = Object.keys(quizAnswers.household)
+    //console.log(resultActivity);
+
+    const resultHouse = Object.keys(quizAnswers.household)
         .reduce((o, babyHouse) => {
             quizAnswers.household[babyHouse] == true && (o[babyHouse] = quizAnswers.household[babyHouse]);
             return o;
@@ -178,15 +172,15 @@ const Quiz = () => {
         event.preventDefault();
         console.log('click')
 
-        const result = {resultSex, resultAge, resultCategory, resultActivity, resultHouse}
-    console.log(result)
+        const result = { resultSex, resultAge, resultCategory, resultActivity, resultHouse }
+        console.log(result)
         try {
             //add quiz to database
             await addQuiz({
                 result
                 //variables: { sex, age, category, activity, needs, household, otherPets }
             });
-            
+
             //clear form?
             setQuizAnswers({});
 
@@ -201,60 +195,101 @@ const Quiz = () => {
             <form onSubmit={handleFormSubmit}>
 
                 <p>Would you prefer a pet of a particular sex?</p>
-                <input type="checkbox" value="female" onChange={handleChange} />
-                <label for="sex">Female</label>
-                <input type="checkbox" value="male" onChange={handleChange} />
-                <label for="sex">Male</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="female" onChange={handleChange} />
+                        <label for="sex">Female</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="male" onChange={handleChange} />
+                        <label for="sex">Male</label>
+                    </li>
+                </ul>
 
                 <p>Would you prefer pet of a particular age?</p>
-                <input type="checkbox" value="baby" onChange={handleChange} />
-                <label for="age">Baby</label>
-                <input type="checkbox" value="youngAdult" onChange={handleChange} />
-                <label for="age">Young Adult</label>
-                <input type="checkbox" value="adult" onChange={handleChange} />
-                <label for="age">Adult</label>
-                <input type="checkbox" value="senior" onChange={handleChange} />
-                <label for="age">Senior</label>
-
+                <ul>
+                    <li>
+                        <input type="checkbox" value="baby" onChange={handleChange} />
+                        <label for="age">Baby</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="youngAdult" onChange={handleChange} />
+                        <label for="age">Young Adult</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="adult" onChange={handleChange} />
+                        <label for="age">Adult</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="senior" onChange={handleChange} />
+                        <label for="age">Senior</label>
+                    </li>
+                </ul>
                 <p>Would you prefer a particular type of animal?</p>
-                <input type="checkbox" value="dog" onChange={handleChange} />
-                <label for="category">Dog</label>
-                <input type="checkbox" value="cat" onChange={handleChange} />
-                <label for="category">Cat</label>
-                <input type="checkbox" value="bird" onChange={handleChange} />
-                <label for="category">Bird</label>
-                <input type="checkbox" value="reptile" onChange={handleChange} />
-                <label for="category">Reptile</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="dog" onChange={handleChange} />
+                        <label for="category">Dog</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="cat" onChange={handleChange} />
+                        <label for="category">Cat</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="bird" onChange={handleChange} />
+                        <label for="category">Bird</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="reptile" onChange={handleChange} />
+                        <label for="category">Reptile</label>
+                    </li>
+                </ul>
 
                 <p>How active would you prefer to be with your pet?</p>
-                <input type="checkbox" value="low" onChange={handleChange} />
-                <label for="activity">I like pets who don't need much activity</label>
-                <input type="checkbox" value="moderate" onChange={handleChange} />
-                <label for="activity">I like a pet who needs a bit of activity but not too much.</label>
-                <input type="checkbox" value="high" onChange={handleChange} />
-                <label for="activity">I love to be really active with my pet</label>
 
-                <p>Would you consider a pet with special needs?</p>
-                <input type="radio" name="needs" value="needsTrue" onChange={handleChange} />
-                <label for="needs">Yes</label>
-                <input type="radio" name="needs" value="needsFalse" onChange={handleChange} />
-                <label for="needs">No</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="low" onChange={handleChange} />
+                        <label for="activity">I like pets who don't need much activity</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="moderate" onChange={handleChange} />
+                        <label for="activity">I like a pet who needs a bit of activity but not too much.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="high" onChange={handleChange} />
+                        <label for="activity">I love to be really active with my pet</label>
+                    </li>
+                </ul>
 
                 <p>Do any of the following live in your household?</p>
-                <input type="checkbox" value="babyHouse" onChange={handleChange} />
-                <label for="household">Baby</label>
-                <input type="checkbox" value="adultHouse" onChange={handleChange} />
-                <label for="household">Adult</label>
-                <input type="checkbox" value="seniorHouse" onChange={handleChange} />
-                <label for="household">Senior</label>
-                <input type="checkbox" value="specialHouse" onChange={handleChange} />
-                <label for="household">Person with special needs</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="babyHouse" onChange={handleChange} />
+                        <label for="household">Baby</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="adultHouse" onChange={handleChange} />
+                        <label for="household">Adult</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="seniorHouse" onChange={handleChange} />
+                        <label for="household">Senior</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="specialHouse" onChange={handleChange} />
+                        <label for="household">Person with special needs</label>
+                    </li>
+                </ul>
 
-                <p>Do any other pets live with you?</p>
-                <input type="radio" name="otherPets" value="otherTrue" onChange={handleChange} />
-                <label for="otherPets">Yes</label>
-                <input type="radio" name="otherPets" value="otherFalse" onChange={handleChange} />
-                <label for="otherPets">No</label>
+                <br />
+                <input type="checkbox" value="needsTrue" onChange={handleChange} />
+                <label for="needs">Yes, i would consider a pet with special needs</label>
+                <br />
+                <br />
+                <input type="checkbox" value="otherTrue" onChange={handleChange} />
+                <label for="otherPets">Yes I have other pets living with me</label>
+
             </form>
             <button className="form-submit btn" type="submit" onClick={handleFormSubmit}>Submit</button>
 
