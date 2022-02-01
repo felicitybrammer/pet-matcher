@@ -31,7 +31,7 @@ const Quiz = () => {
                 moderate: false,
                 high: false
             },
-            need: {
+            needs: {
                 needsTrue: false,
                 needsFalse: false,
             },
@@ -118,13 +118,22 @@ const Quiz = () => {
             default:
                 break;
         }
+        console.log(quizAnswers)//THIS WORKS!!!! logs an object of object
+        return quizAnswers; 
     }
 
     const handleFormSubmit = async event => {
         event.preventDefault();
+        console.log('click')
+
+        
+
         try {
             //add quiz to database
             await addQuiz({
+                //splice out the things that are true
+                quizAnswers
+                // put quizAnswers in here somewhere
                 //variables: { sex, age, category, activity, needs, household, otherPets }
             });
             //clear form?
@@ -196,7 +205,7 @@ const Quiz = () => {
                 <input type="radio" name="otherPets" value="otherFalse" onChange={handleChange} />
                 <label for="otherPets">No</label>
             </form>
-            <button className="form-submit btn" type="submit">Submit</button>
+            <button className="form-submit btn" type="submit" onClick={handleFormSubmit}>Submit</button>
 
         </div >
 
