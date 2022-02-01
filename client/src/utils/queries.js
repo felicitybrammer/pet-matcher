@@ -38,3 +38,22 @@ export const QUERY_PET = gql `
           }  
     }
 `;
+
+export const QUERY_ME = gql `
+query me {
+    me {
+      _id
+      name
+      email
+        answers {
+          sex
+          age
+          category
+          activity
+          needs
+          household
+          otherPets
+        }
+      }
+    }
+`;
