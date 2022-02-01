@@ -175,9 +175,9 @@ const Quiz = () => {
                 <label for="activity">I love to be really active with my pet</label>
 
                 <p>Would you consider a pet with special needs?</p>
-                <input type="radio" name="need" value="needsTrue" onChange={handleChange} />
+                <input type="radio" name="needs" value="needsTrue" onChange={handleChange} />
                 <label for="needs">Yes</label>
-                <input type="radio" name="need" value="needsFalse" onChange={handleChange} />
+                <input type="radio" name="needs" value="needsFalse" onChange={handleChange} />
                 <label for="needs">No</label>
 
                 <p>Do any of the following live in your household?</p>
