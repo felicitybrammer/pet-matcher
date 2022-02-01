@@ -18,7 +18,7 @@ const PetList = ({ pets, pet }) => {
             {pets &&
                 pets.map((pet) => (
                     <Card key={pet._id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="{require(`../../assets/images/pet-images/${pet.image}`)}" />
+                        <Card.Img variant="top" src="{require(`../../assets/petImages/${pet.image}`)}" />
                         <Card.Body>
                             <Card.Title>Hi, I'm {pet.name}</Card.Title>
                             <Card.Text>
@@ -42,11 +42,11 @@ const PetList = ({ pets, pet }) => {
                                 <Modal.Body>
                                     <container>
                                         <div>
-                                            <img src="{require(`../../assets/images/pet-images/${pet.image}`)}" alt="cute pet"></img>
+                                            <img src="{require(`../../assets/petImages/${pet.image}`)}" alt="cute pet"></img>
                                         </div>
 
                                         <div>
-                                            <ul>
+                                            <ul className="">
                                                 <li>
                                                     Description: {pet.description}
                                                 </li>
