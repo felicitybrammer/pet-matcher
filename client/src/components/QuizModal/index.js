@@ -126,6 +126,13 @@ const Quiz = () => {
         event.preventDefault();
         console.log('click')
 
+        Object.getOwnPropertyNames(quizAnswers.activity).forEach(function(val, idx, array){
+            if([val].value==true){
+                console.log(quizAnswers.activity[val])
+            }
+        }
+            
+        )
         
 
         try {
