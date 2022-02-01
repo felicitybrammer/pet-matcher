@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { ADD_QUIZ } from '../../utils/mutations';
-
+import { QUERY_ME } from '../../utils/queries';
 
 const Quiz = () => {
+    const { data: { me: {} } } = useQuery(QUERY_ME);
+    const [addQuiz, { error }] = useMutation(ADD_QUIZ, {
+        update(cache, {data: { addQuiz } }) {
+            
+            //update me object's cache
+            const {me} = cache.readQuery({ query: QUERY_ME, variables: me}); //this is null. why??
+            cache.writeQuery({
+                query: QUERY_ME,
+                data: { me: {...me, answers: [...me.answers, addQuiz] } }
+            });
 
-
-
-    const [addQuiz, { error }] = useMutation(ADD_QUIZ);
+        }
+    });
     const [quizAnswers, setQuizAnswers] = useState(
         {
             sex: {
@@ -129,7 +138,7 @@ const Quiz = () => {
             return o;
         }, {});
 
-    console.log(resultSex);
+    //console.log(resultSex);
 
     const resultAge = Object.keys(quizAnswers.age)
         .reduce((o, baby) => {
@@ -137,7 +146,7 @@ const Quiz = () => {
             return o;
         }, {});
 
-    console.log(resultAge);
+    //console.log(resultAge);
 
     const resultCategory = Object.keys(quizAnswers.category)
         .reduce((o, dog) => {
@@ -145,7 +154,7 @@ const Quiz = () => {
             return o;
         }, {});
 
-    console.log(resultCategory);
+    //console.log(resultCategory);
 
     const resultActivity = Object.keys(quizAnswers.activity)
             .reduce((o, low) => {
@@ -153,7 +162,7 @@ const Quiz = () => {
                 return o;
             }, {});
 
-        console.log(resultActivity);
+        //console.log(resultActivity);
     
         const resultHouse = Object.keys(quizAnswers.household)
         .reduce((o, babyHouse) => {
@@ -161,7 +170,7 @@ const Quiz = () => {
             return o;
         }, {});
 
-    console.log(resultHouse);
+    //console.log(resultSex, resultAge, resultCategory, resultActivity,resultHouse);
 
 
 
@@ -169,22 +178,15 @@ const Quiz = () => {
         event.preventDefault();
         console.log('click')
 
-
-
-
+        const result = {resultSex, resultAge, resultCategory, resultActivity, resultHouse}
+    console.log(result)
         try {
             //add quiz to database
             await addQuiz({
-                //splice out the things that are true
-                //quizAnswers
-                // put quizAnswers in here somewhere
+                result
                 //variables: { sex, age, category, activity, needs, household, otherPets }
-
-
-
-
-
             });
+            
             //clear form?
             setQuizAnswers({});
 
