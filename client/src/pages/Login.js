@@ -15,7 +15,7 @@ const Login = (props) => {
           query: QUERY_ME,
           data: { ...login} 
       });
-    }})
+    }}) 
   
     // update state based on form input changes
     const handleChange = (event) => {
