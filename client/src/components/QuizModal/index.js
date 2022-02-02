@@ -5,19 +5,17 @@ import { QUERY_ME } from '../../utils/queries';
 
 const Quiz = () => {
     // const { data: { me: {} } } = useQuery(QUERY_ME);
-    const [addQuiz, { error }] = useMutation(ADD_QUIZ,
-        {
-            update(cache, { data: { addQuiz } }) {
-
-                //update me object's cache
-                const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
-                cache.writeQuery({
-                    query: QUERY_ME,
-                    data: { me: { ...me, answers: [addQuiz] } }
-                });
-
-            }
-        });
+    const [addQuiz, { error }] = useMutation(ADD_QUIZ,{
+        update(cache, { data: { addQuiz } }) {
+            //update me object's cache
+            const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
+            cache.writeQuery({
+                query: QUERY_ME,
+                data: { me: { ...me, answers: [addQuiz] } }
+            });
+        }  
+     } )
+       
     // const [addQuiz, { error }] = useMutation(ADD_QUIZ);
     const [quizAnswers, setQuizAnswers] = useState(
         {
@@ -150,19 +148,19 @@ const Quiz = () => {
         })
         console.log('results:', results)
 
-        // try {
-        //     //add quiz to database
-        //     await addQuiz({
-        //         variables: quizAnswers
-        //         //variables: { sex, age, category, activity, needs, household, otherPets }
-        //     });
+        try {
+            //add quiz to database
+            await addQuiz({
+                variables: results
+                //variables: { sex, age, category, activity, needs, household, otherPets }
+            });
 
-        //     //clear form?
-        //     setQuizAnswers({});
+            //clear form?
+            setQuizAnswers({});
 
-        // } catch (error) {
-        //     console.log(error);
-        // }
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
