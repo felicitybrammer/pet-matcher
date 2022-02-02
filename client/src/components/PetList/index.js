@@ -58,8 +58,6 @@ const PetList = ({ pets, pet }) => {
 
     return (
         <div>
-
-
             {pets &&
                 pets.map((pet) => (
                     <Card key={pet._id} style={{ width: '18rem' }}>
