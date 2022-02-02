@@ -27,14 +27,7 @@ const resolvers = {
             .select('-__v')
             // .populate('answers');
         },
-        // quizes: async () => {
-        //   return Quiz.find()
-        //   .select('-__v')
-        // },
-        // quiz: async (parent, {_id}) => {
-        //   return Quiz.findOne({_id})
-        //   .select('-__v')
-        // },
+      
         
     },
     
