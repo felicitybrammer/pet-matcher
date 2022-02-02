@@ -34,11 +34,17 @@ yellow #f5cb39 */
 
 .logoBtn{
   padding-left: 10px;
-  max-inline-size: 170px;
+  max-inline-size: 140px;
 }
 .navBtn{
   display: flex;
   justify-content: space-between;
+  padding-right: 20px;
+}
+
+.navLogo{
+  justify-content: center;
+  position: relative;
 }
 /* 
 .loginBtn{
@@ -47,3 +53,14 @@ yellow #f5cb39 */
 /* .loginCard{
 
 } */
+
+.noBullet{
+  list-style-type: none;
+}
+
+.footer{
+  background-color: #2bb7d0;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+}

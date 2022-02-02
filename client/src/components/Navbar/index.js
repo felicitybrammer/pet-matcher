@@ -21,12 +21,15 @@ const NavBar = () => {
 
     return (
         <Navbar expand="lg" variant="dark" className="nav" style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div className="navLogo">
                 <Link><img to="/" className="logoBtn" src={okcLogo} alt="OkCreature's logo"></img></Link>
                 {/* <span role='img' aria-label='code'>
                     {' '}
                     <FontAwesomeIcon icon={faCode} />
                 </span> */}
+            </div>
+
+            <div>
                 <Link className="link" to="/">
                     <h1 className="title">OkCreature</h1>
                 </Link>
