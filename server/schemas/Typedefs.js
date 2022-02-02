@@ -26,10 +26,10 @@ const typeDefs = gql`
 
   type Quiz {
     _id: ID
-    sex: String
+    sex: [String]
     age: [String]
     category: [String]
-    activity: String
+    activity: [String]
     needs: Boolean
     household: [String]
     otherPets: Boolean

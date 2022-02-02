@@ -5,19 +5,19 @@ import { QUERY_ME } from '../../utils/queries';
 
 const Quiz = () => {
     // const { data: { me: {} } } = useQuery(QUERY_ME);
-    const [addQuiz, { error }] = useMutation(ADD_QUIZ, 
+    const [addQuiz, { error }] = useMutation(ADD_QUIZ,
         {
-        update(cache, {data: { addQuiz } }) {
+            update(cache, { data: { addQuiz } }) {
 
-            //update me object's cache
-            const {me} = cache.readQuery({ query: QUERY_ME}); //this is null. why??
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: {...me, answers: [addQuiz] } }
-            });
+                //update me object's cache
+                const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
+                cache.writeQuery({
+                    query: QUERY_ME,
+                    data: { me: { ...me, answers: [addQuiz] } }
+                });
 
-        }
-    });
+            }
+        });
     // const [addQuiz, { error }] = useMutation(ADD_QUIZ);
     const [quizAnswers, setQuizAnswers] = useState(
         {
@@ -125,25 +125,44 @@ const Quiz = () => {
         return quizAnswers;
     }
 
-
-
+    /* 
+        quizAnswers - object with key/value pairs for each question
+        questionName - the question name (sex, age, category, activity, needs, household, otherPets)
+        questionAnswers - the key/value pairs for the question answers
+        questionAnswerLabel - the question text/label
+        questionAnswerValue - the question value as a boolean
+    */
     const handleFormSubmit = async event => {
         event.preventDefault();
         console.log(quizAnswers)
-        
-        try {
-            //add quiz to database
-            await addQuiz({
-                variables: quizAnswers
-                //variables: { sex, age, category, activity, needs, household, otherPets }
-            });
+        const results = {}
+        Object.keys(quizAnswers).map((questionName) => {
+            const questionAnswers = quizAnswers[questionName];
+            results[questionName] = [];
+            Object.keys(questionAnswers).map((questionAnswerLabel) => {
+                const questionAnswerValue = quizAnswers[questionName][questionAnswerLabel];
+                if (questionAnswerValue) {
+                    results[questionName].push(questionAnswerLabel);
+                }
+            })
 
-            //clear form?
-            setQuizAnswers({});
+            
+        })
+        console.log('results:', results)
 
-        } catch (error) {
-            console.log(error);
-        }
+        // try {
+        //     //add quiz to database
+        //     await addQuiz({
+        //         variables: quizAnswers
+        //         //variables: { sex, age, category, activity, needs, household, otherPets }
+        //     });
+
+        //     //clear form?
+        //     setQuizAnswers({});
+
+        // } catch (error) {
+        //     console.log(error);
+        // }
     }
 
     return (
