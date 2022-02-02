@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Pet from "../PetProfile";
+// import Button from 'react-bootstrap/Button';
+// import Pet from "../PetProfile";
 // import { Link } from 'react-router-dom';
 // import { useQuery } from '@apollo/client'
 // import { QUERY_PETS } from '../utils/queries';
@@ -63,7 +63,7 @@ const PetList = ({ pets, pet }) => {
             {pets &&
                 pets.map((pet) => (
                     <Card key={pet._id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)} />
+                        <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)}/>
                         <Card.Body>
                             <Card.Title>Hi, I'm {pet.name}</Card.Title>
                             <Card.Text>
