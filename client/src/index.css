@@ -18,6 +18,10 @@ code {
   text-decoration: none;
   color: white;
 }
+.link2{
+  text-decoration: none;
+  color: blue;
+}
 .title{
   color: white;
 	font-size: 45px;
@@ -27,3 +31,19 @@ code {
 /* orange #ff824c
 blue #2bb7d0
 yellow #f5cb39 */
+
+.logoBtn{
+  padding-left: 10px;
+  max-inline-size: 170px;
+}
+.navBtn{
+  display: flex;
+  justify-content: space-between;
+}
+/* 
+.loginBtn{
+  button: #ff824c;
+} */
+/* .loginCard{
+
+} */

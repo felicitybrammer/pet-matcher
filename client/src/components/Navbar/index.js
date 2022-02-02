@@ -22,7 +22,7 @@ const NavBar = () => {
     return (
         <Navbar expand="lg" variant="dark" className="nav" style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <img className="" src={okcLogo} alt="OkCreature's logo"></img>
+                <Link><img to="/" className="logoBtn" src={okcLogo} alt="OkCreature's logo"></img></Link>
                 {/* <span role='img' aria-label='code'>
                     {' '}
                     <FontAwesomeIcon icon={faCode} />
@@ -43,7 +43,7 @@ const NavBar = () => {
                             checked={checked}
                             onChange={(e) => setChecked(e.currentTarget.checked)}
                         >
-                            <Link className="link" to="/profile">Profile</Link>
+                            <Link className="link2" to="/profile">Profile</Link>
                         </ToggleButton>
 
                         {/* <Link to="/about">About</Link>
@@ -58,7 +58,7 @@ const NavBar = () => {
                             onChange={(e) => setChecked(e.currentTarget.checked)}
                             onClick={logout}
                         >
-                            <Link className="link" to="/logout">Logout</Link>
+                            <Link className="link2" to="/logout">Logout</Link>
                         </ToggleButton>
                     </>
                 ) : (
