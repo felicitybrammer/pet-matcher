@@ -42,7 +42,7 @@ export const QUERY_PET = gql `
 export const QUERY_ME = gql `
 query me {
     me {
-      _id
+      id
       name
       email
         answers {
