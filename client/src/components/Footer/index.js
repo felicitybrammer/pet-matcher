@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {faUsers} from '@fortawesome/free-solid-svg-icons'
+import About from '../../pages/Creators';
+
 
 function Footer() {
-  const year = new Date().getFullYear();
 
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer d-flex link" style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -12,25 +16,16 @@ function Footer() {
         Thanks for visiting!
       </div>
 
-      <div>
-        <ul className="noBullet">
-          <li class="social-list__item">
-            <FontAwesomeIcon icon={faGithub} href="https://github.com/felicitybrammer/pet-matcher" />
-            {/* <a class="social-list__link" href="https://github.com/felicitybrammer/pet-matcher">OkCreature</a> */}
+      <div className="footerIcons" style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <a className="social-list__link" href="https://github.com/felicitybrammer/pet-matcher" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faGithub} color="white" />
+        </a>
 
-
-            {/* <FontAwesomeIcon icon={faGithub} />
-                  <a class="social-list__link" href="https://github.com/maks-pixel">Makda Girmay</a>
-                  <FontAwesomeIcon icon={faGithub} />
-                  <a class="social-list__link" href="https://github.com/reza-mahmoudian">Reza Mahmoudian</a>
-                  <FontAwesomeIcon icon={faGithub} />
-                  <a class="social-list__link" href="https://github.com/rpanglia">Ravneet Panglia</a>
-                  <FontAwesomeIcon icon={faGithub} />
-                  <a class="social-list__link" href="https://github.com/mnijjar24">Michelle Nijjar</a>
-                  <FontAwesomeIcon icon={faGithub} />
-                  <a class="social-list__link" href="https://github.com/felicitybrammer">Felicity Brammer</a> */}
-          </li>
-        </ul>
+        <Link className="link" to="/about">
+          <FontAwesomeIcon icon={faUsers} color="white" />
+        </Link>
+        
+      
       </div>
 
       <div>
@@ -41,5 +36,4 @@ function Footer() {
   );
 }
 
-// style={{ display: 'flex', justifyContent: 'space-between' }}
 export default Footer;

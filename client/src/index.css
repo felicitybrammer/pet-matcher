@@ -60,7 +60,10 @@ yellow #f5cb39 */
 
 .footer{
   background-color: #2bb7d0;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-right: 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+.footerIcons{
+  padding-left: 10px;
+  
 }

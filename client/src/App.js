@@ -11,6 +11,7 @@ import UserProfile from './pages/UserProfile'
 import NoMatch from './pages/NoMatch';
 import Footer from './components/Footer';
 import { setContext } from '@apollo/client/link/context';
+import About from './pages/Creators';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,6 +44,7 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile/:name?" component={UserProfile} />
+              <Route exact path="/about" component={About} />
               
               {/* <Route exact path="/pet/{pet.name}" component={PetProfile} />  */}
               
@@ -51,6 +53,7 @@ function App() {
           </div>
       
           <Footer />
+        
         </div>
       </Router>
     </ApolloProvider>

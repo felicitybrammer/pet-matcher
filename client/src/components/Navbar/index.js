@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import ToggleButton from 'react-bootstrap/ToggleButton';
@@ -22,7 +22,7 @@ const NavBar = () => {
     return (
         <Navbar expand="lg" variant="dark" className="nav" style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div className="navLogo">
-                <Link><img to="/" className="logoBtn" src={okcLogo} alt="OkCreature's logo"></img></Link>
+                <Link to="/"><img  className="logoBtn" src={okcLogo} alt="OkCreature's logo" /></Link>
                 {/* <span role='img' aria-label='code'>
                     {' '}
                     <FontAwesomeIcon icon={faCode} />
