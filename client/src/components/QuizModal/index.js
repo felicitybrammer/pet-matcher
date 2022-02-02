@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { ADD_QUIZ } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
 const Quiz = () => {
-    // const { data: { me: {} } } = useQuery(QUERY_ME);
+     //const { data: { me: {name} } } = useQuery(QUERY_ME);
     const [addQuiz, { error }] = useMutation(ADD_QUIZ)
         // update(cache, { data: { addQuiz } }) {
         //     //update me object's cache
@@ -130,6 +131,9 @@ const Quiz = () => {
         questionAnswerLabel - the question text/label
         questionAnswerValue - the question value as a boolean
     */
+
+        let history = useHistory()
+
     const handleFormSubmit = async event => {
         event.preventDefault();
         console.log(quizAnswers)
@@ -149,6 +153,8 @@ const Quiz = () => {
                     
                 }
             })
+            
+            history.push(`/profile/`)
 
             
         })
