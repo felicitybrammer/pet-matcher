@@ -19,7 +19,7 @@
     "name": "Keelah",
     "description": "Miami street dog. Speedy and snuggly.",
     "image":"../../client/pet-images/Keelah.jpeg",
-    "location": "Vancouver",
+    "location": "Venice",
     "answers": [
         {   
             "gender": "female",
@@ -61,7 +61,7 @@
             "category":"Dog",
             "activity": "high", 
             "needs": "false", 
-            "household": ["baby", "child"],  
+            "household": "baby",  
             "other pets": "false"
             }
         ]
@@ -138,7 +138,7 @@
         "name": "Brother Cat",
         "description": "as wide eyed and sincere as his sister is sinister. Basically a yellow lab puppy in a snazzy ginger suit. So handsome. Kinda of a Himbo. Stands beside you while you're cooking and gently takes snacks off the counter with his paws.",
         "image":"../../client/pet-images/Brother5.jpeg",
-        "location": "Victoria",
+        "location": "Victorias",
         "answers": [
         {   
             "gender": "male",
@@ -155,7 +155,7 @@
         "name": "Sabine",
         "description": "the Goblin Queen. AKA Sharkberry. Sharpest kitten in existence. Insists on being domesticated. Has zero space boundaries and will steal the croissant right out of your hands. Unexpectedly affectionate, often while looking disgusted with you.",
         "image":"../../client/pet-images/Sabine.jpeg",
-        "location": "Victoria",
+        "location": "Malton",
         "answers": [
         {   
             "gender": "female",
@@ -189,7 +189,7 @@
         "name": "Marty",
         "description": "English Bulldog and likely Boxer mixed, 8 yrs old, deaf from birth, knows sign language, loves bum scratches, arm chair snuggles and destroying stuffies. Very food motivated.",
         "image":"../../client/pet-images/Marty.jpeg",
-        "location": "Vancouver",
+        "location": "Oakville",
         "answers": [
         {   
             "gender": "male",
@@ -206,7 +206,7 @@
         "name": "Pippa",
         "description": "Pippa, English Bulldog,  was born with Spina Bifida, is incontinent, will be a diaper baby for life, very vocal when she wants attention (especially when she wants her diaper changed), loves to eat momma’s expensive shoes, runs very fast (especially after being caught eating momma’s expensive shoes).",
         "image":"../../client/pet-images/Pippa.jpeg",
-        "location": "Vancouver",
+        "location": "Guelph",
         "answers": [
         {   
             "gender": "female",
@@ -240,7 +240,7 @@
         "name": "Merrick",
         "description": "loves people - especially young people! Merrick (Rottie) is super gentle and just wants butt scratches. Walks, tug play and good dog bones preferred!",
         "image":"../../client/pet-images/Merrick-Pip.jpeg",
-        "location": "Whitehorse",
+        "location": "Cambridge",
         "answers": [
         {   
             "gender": "male",
@@ -256,8 +256,8 @@
     {
         "name": "Pip",
         "description": "loves people - especially young people! Pip (Mini Schnauzer) is mostly a one person dog but will tolerate loving ‘smooches’. Walks, tug play and good dog bones preferred!",
-        "image":"../../client/pet-images/Merrick-Pip.jpeg",
-        "location": "Whitehorse",
+        "image":"../../client/pet-images/Merric-Pip.jpeg",
+        "location": "Georgetown",
         "answers": [
         {   
             "gender": "female",
@@ -274,7 +274,7 @@
         "name": "Koda",
         "description": "outgoing, loves bananas, hates the crate, perfect date would be chasing each other through the woods before sharing a swampy dip in the local pond",
         "image":"../../client/pet-images/Koda.jpeg",
-        "location": "Whitehorse",
+        "location": "Orangeville",
         "answers": [
         {   
             "gender": "female",
@@ -308,7 +308,7 @@
         "name": "Sam",
         "description": "Ex-sled dog. Alaskan husky. Very active and sweet. Loves to run and roll in snow. Submissive around other dogs. Unsure about children. A cheese stealer.",
         "image":"../../client/pet-images/Sam2.jpeg",
-        "location": "Whitehorse",
+        "location": "Dawson City",
         "answers": [
         {   
             "gender": "male",
@@ -325,7 +325,7 @@
         "name": "Mia",
         "description": "Sedentary senior who loves to sleep on heated blankets all day. Solar powered.",
         "image":"../../client/pet-images/Mia.jpeg",
-        "location": "Whitehorse",
+        "location": "Calgary",
         "answers": [
         {   
             "gender": "female",
@@ -342,7 +342,7 @@
         "name": "Emma",
         "description": "Crested gecko. Loves to climb and leap into the abyss.",
         "image":"../../client/pet-images/Emma.jpeg",
-        "location": "Whitehorse",
+        "location": "Edmonton",
         "answers": [
         {   
             "gender": "female",
@@ -359,7 +359,7 @@
         "name": "Lou",
         "description": "Lou enjoys escaping, exploring inconvenient places, playing hide-and-seek (for months, if possible), and committing wanton acts of destruction. Enthusiastic but terrible climber. Approximately 15 years old.",
         "image":"../../client/pet-images/Lou2.jpeg",
-        "location": "Whitehorse",
+        "location": "Banff",
         "answers": [
         {   
             "gender": "male",
@@ -393,7 +393,7 @@
         "name": "Douglas Fur",
         "description": "A barn rescue. Very food motivated",
         "image":"../../client/pet-images/DouglasFur.jpeg",
-        "location": "Halifax",
+        "location": "Dartmouth",
         "answers": [
         {   
             "gender": "male",
@@ -410,7 +410,7 @@
         "name": "Jerome",
         "description": "Terrier rescue. Very sweet and shy. Hates cold weather",
         "image":"../../client/pet-images/Jerome.jpeg",
-        "location": "Halifax",
+        "location": "Beechville",
         "answers": [
         {   
             "gender": "male",
@@ -427,7 +427,7 @@
         "name": "Dick",
         "description": "Opinionated cockatiel. Loves to tear up cardboard and shriek. Will dance along to Dolly Parton.",
         "image":"../../client/pet-images/Dick.jpeg",
-        "location": "Halifax",
+        "location": "Spryfield",
         "answers": [
         {   
             "gender": "male",
@@ -444,7 +444,7 @@
         "name": "Andrew",
         "description": "Quirky parrot. Prefers not to sit on your hand",
         "image":"../../client/pet-images/Andrew.jpeg",
-        "location": "Halifax",
+        "location": "Truro",
         "answers": [
         {   
             "gender": "male",
@@ -461,7 +461,7 @@
         "name": "Gayle",
         "description": "Shy and quiet. Doesn't like to be caged.",
         "image":"../../client/pet-images/Gayle.jpeg",
-        "location": "Halifax",
+        "location": "Yarmouth",
         "answers": [
         {   
             "gender": "female",
@@ -475,10 +475,10 @@
         ]
     },
     {
-        "name": "Frankie",
+        "name": "Franky",
         "description": "Princess parrot who loves to sit on your head",
         "image":"../../client/pet-images/FrankieBird.jpeg",
-        "location": "Halifax",
+        "location": "Syndey",
         "answers": [
         {   
             "gender": "female",
