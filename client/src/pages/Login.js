@@ -5,6 +5,8 @@ import { QUERY_ME } from '../utils/queries'
 
 import Auth from '../utils/auth';
 
+import Button from 'react-bootstrap/esm/Button';
+
 const Login = (props) => {
     const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN_USER, {update(cache, { data: { login } }) {
@@ -52,12 +54,14 @@ const Login = (props) => {
     };
   
     return (
-      <main className="flex-row justify-center mb-4">
-        <div className="col-12 col-md-6">
+      <main className="flex-row justify-center mt-5">
+        <div className="moveCard">
           <div className="card loginCard">
             <h4 className="card-header">Login</h4>
+            <br/>
             <div className="card-body">
               <form onSubmit={handleFormSubmit}>
+                <h5>Email:</h5>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -67,6 +71,9 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br />
+                <br />
+                <h5>Password:</h5>
                 <input
                   className="form-input"
                   placeholder="******"
@@ -76,9 +83,14 @@ const Login = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button className="btn d-block w-100 loginBtn" type="submit">
-                  Submit
-                </button>
+                <br />
+                <br />
+                <div className="d-grid gap-2">
+                  <Button type="submit" variant="warning" size="lg">
+                    Submit
+                  </Button>
+                </div>
+                
               </form>
   
               {error && <div>Login failed</div>}
@@ -90,4 +102,8 @@ const Login = (props) => {
   };
   
   export default Login;
-  
+
+  //<button className="btn d-block w-100 loginBtn" type="submit">Submit</button>
+
+  // <main className="flex-row justify-center mt-4">
+  // <div className="col-12 col-md-8">

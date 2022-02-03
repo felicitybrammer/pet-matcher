@@ -267,8 +267,9 @@ const Quiz = () => {
 
             </form>
             <br />
-            <Button variant="warning" size="lg" className="form-submit btn" type="submit" onClick={handleFormSubmit}>Submit</Button>
-
+            <div className="d-grid gap-2">
+                <Button variant="warning" size="lg" className="form-submit btn" type="submit" onClick={handleFormSubmit}>Submit</Button>
+            </div>
         </div >
 
     )

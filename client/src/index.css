@@ -55,11 +55,6 @@ yellow #f5cb39 */
 } */
 
 /* CAROUSEL CSS */
-/* .carousel-item > img {
-  object-fit: cover;
-  height: calc(100vh - 56px);
-  width: 100%;
-} */
 .carouselContainer{
   background-color: #2bb7d017;
   padding: 10px;
@@ -68,6 +63,7 @@ yellow #f5cb39 */
   z-index: 9999;
   /* height: 1000px; */
   width: 100%;
+  position: relative;
  
   /* margin: 20px */
 }
@@ -76,6 +72,11 @@ yellow #f5cb39 */
 .footer{
   background-color: #2bb7d0;
   padding: 10px 20px 10px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
 }
 
 /* .footerIcons{
@@ -124,4 +125,47 @@ yellow #f5cb39 */
 
 .space{
   text-indent: 10px;
+}
+
+.text-center{
+  text-align: center;
+}
+/* .modalTitle{
+  justify-content: center;
+  text-align: center;
+} */
+
+.card-body{
+  justify-content: center;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+.loginCard{
+  justify-content: center;
+  text-align: center;
+}
+
+.form-input{
+  width: 400px;
+  height: 40px;
+}
+
+.card-header{
+  color: #128296fb;
+}
+
+.container{
+  justify-content: center;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.moveCard{
+  padding: 150px;
+}
+
+.moveSignCard{
+  padding: 100px;
 }
