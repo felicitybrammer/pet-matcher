@@ -99,7 +99,7 @@ const Quiz = () => {
             case "high":
                 setQuizAnswers((prevState) => ({ ...prevState, activity: { ...prevState.activity, high: !prevState.activity.high } }))
                 break;
-            case "needsTrue":
+            case "needs":
                 setQuizAnswers((prevState) => ({ ...prevState, needs: { ...prevState.needs, true: !prevState.needs.needsTrue } }))
                 break;
             case "babyHouse":
@@ -114,7 +114,7 @@ const Quiz = () => {
             case "specialHouse":
                 setQuizAnswers((prevState) => ({ ...prevState, household: { ...prevState.household, specialHouse: !prevState.household.specialHouse } }))
                 break;
-            case "otherTrue":
+            case "otherPets":
                 setQuizAnswers((prevState) => ({ ...prevState, otherPets: { ...prevState.otherPets, true: !prevState.otherPets.otherTrue } }))
                 break;
             default:
