@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap";
 import ravImg from '../assets/team/rav2.jpg';
 import fbImg from '../assets/team/fb.png';
 import maksImg from '../assets/team/maks.jpg';
+import mjImg from '../assets/team/mj.jpg';
 
 const About = () => {
     return (
@@ -25,7 +26,7 @@ const About = () => {
                     <Card.Body className="cardBody">
                         <Card.Title className="creatorTitle">Felicity Brammer</Card.Title>
                         <Card.Text style={{ fontSize: "10px" }}>
-                            Kinesiologist turned Web Developer here! I am on track to earn a Full-Stack Web Development certificate from the University of Toronto's School of Continuing Studies. I completed a Bachelor of Science in Human Kinetics and have experience working withinin Brain Injury rehab: specifically focused on return-to-work and improving quality of life treatment. With a passion for healthcare, I am in pursuit of furthering my skillset in a unique way by levering technology to one day improve lives. When I'm not in front of screens, I enjoy DIY-ing things around the house, gardening, exploring the world and making memories with friends and family.
+                        My background is in STEM education: specifically in teaching and developing mathematics and physics curricula, and working to motivate young people to pursue these fields. I’m passionate about using logic to find creative and innovative solutions to problems, and I’m hoping to leverage my skills, experience and drive to build real-world scalable and impactful applications. When I’m not in front of screens, I’m out in the forest with my neurotic but joyful Alaskan husky, Sam.
                         </Card.Text>
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                             <Button className="" variant="warning" icon={faGithub} href="https://github.com/felicitybrammer" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></Button>
@@ -36,7 +37,7 @@ const About = () => {
                 </Card>
 
                 <Card style={{ width: '20rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Img variant="top" src={mjImg} />
                     <Card.Body className="cardBody">
                         <Card.Title className="creatorTitle">Michelle Nijjar</Card.Title>
                         <Card.Text style={{ fontSize: "10px" }}>
@@ -69,7 +70,7 @@ const About = () => {
                     <Card.Body className="cardBody">
                         <Card.Title className="creatorTitle">Ravneet Panglia</Card.Title>
                         <Card.Text style={{ fontSize: "10px" }} >
-                            Kinesiologist turned Web Developer here! I am on track to earn a Full-Stack Web Development certificate from the University of Toronto's School of Continuing Studies. I completed a Bachelor of Science in Human Kinetics and have experience working withinin Brain Injury rehab: specifically focused on return-to-work and improving quality of life treatment. With a passion for healthcare, I am in pursuit of furthering my skillset in a unique way by levering technology to one day improve lives. When I'm not in front of screens, I enjoy DIY-ing things around the house, gardening, exploring the world and making memories with friends and family.
+                            Kinesiologist turned Web Developer here! I am on track to earn a Full-Stack Web Development certificate from the University of Toronto's School of Continuing Studies. I completed a Bachelor of Science in Human Kinetics and have experience working withinin Brain Injury rehab: specifically focused on return-to-work. With a passion for healthcare, I am in pursuit of furthering my skillset in a unique way by levering technology to improve lives. When I'm not in front of screens, I enjoy DIY-ing things around the house, gardening, exploring the world and making memories with friends and family.
                         </Card.Text>
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                             <Button variant="warning" icon={faGithub} href="https://github.com/rpanglia" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></Button>

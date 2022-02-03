@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { ADD_QUIZ } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
+import { Button } from 'react-bootstrap';
 
 const Quiz = () => {
     // const { data: { me: {} } } = useQuery(QUERY_ME);
@@ -169,7 +170,7 @@ const Quiz = () => {
             <form onSubmit={handleFormSubmit}>
 
                 <p>Would you prefer a pet of a particular sex?</p>
-                <ul>
+                <ul className="noBullet">
                     <li>
                         <input type="checkbox" value="female" onChange={handleChange} />
                         <label for="female">Female</label>
@@ -181,7 +182,7 @@ const Quiz = () => {
                 </ul>
 
                 <p>Would you prefer pet of a particular age?</p>
-                <ul>
+                <ul className="noBullet">
                     <li>
                         <input type="checkbox" value="baby" onChange={handleChange} />
                         <label for="age">Baby</label>
@@ -200,7 +201,7 @@ const Quiz = () => {
                     </li>
                 </ul>
                 <p>Would you prefer a particular type of animal?</p>
-                <ul>
+                <ul className="noBullet">
                     <li>
                         <input type="checkbox" value="dog" onChange={handleChange} />
                         <label for="category">Dog</label>
@@ -221,7 +222,7 @@ const Quiz = () => {
 
                 <p>How active would you prefer to be with your pet?</p>
 
-                <ul>
+                <ul className="noBullet">
                     <li>
                         <input type="checkbox" value="low" onChange={handleChange} />
                         <label for="activity">I like pets who don't need much activity</label>
@@ -237,7 +238,7 @@ const Quiz = () => {
                 </ul>
 
                 <p>Do any of the following live in your household?</p>
-                <ul>
+                <ul className="noBullet">
                     <li>
                         <input type="checkbox" value="babyHouse" onChange={handleChange} />
                         <label for="household">Baby</label>
@@ -258,14 +259,15 @@ const Quiz = () => {
 
                 <br />
                 <input type="checkbox" value="needsTrue" onChange={handleChange} />
-                <label for="needs">Yes, i would consider a pet with special needs</label>
+                <label className="space" for="needs">Yes, I would consider a pet with special needs</label>
                 <br />
                 <br />
                 <input type="checkbox" value="otherTrue" onChange={handleChange} />
-                <label for="otherPets">Yes I have other pets living with me</label>
+                <label className="space" for="otherPets">Yes, I have other pets living with me</label>
 
             </form>
-            <button className="form-submit btn" type="submit" onClick={handleFormSubmit}>Submit</button>
+            <br />
+            <Button variant="warning" size="lg" className="form-submit btn" type="submit" onClick={handleFormSubmit}>Submit</Button>
 
         </div >
 

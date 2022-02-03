@@ -78,10 +78,10 @@ yellow #f5cb39 */
   padding: 10px 20px 10px 20px;
 }
 
-.footerIcons{
-  padding-left: 10px;
+/* .footerIcons{
+  padding-left: 20px;
 
-}
+} */
 
 /* CREATOR PAGE body*/
 .cardContainer{
@@ -101,4 +101,27 @@ yellow #f5cb39 */
   text-align: center;
   color: #128296;
   font-weight: 200;
+}
+
+.cardImage{
+  opacity: 0.33;
+}
+
+.captions{
+  /* background-color: #f1e4c0d2; */
+  /* background-color: #2bb7d09d; */
+  background-color: #1282968c;
+  color: black;
+  padding: 30px;
+  /* max-inline-size: 900px; */
+
+}
+
+.noBullet{
+  list-style: none;
+  text-indent: 10px;
+}
+
+.space{
+  text-indent: 10px;
 }
