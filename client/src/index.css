@@ -54,9 +54,24 @@ yellow #f5cb39 */
 
 } */
 
-.noBullet{
-  list-style-type: none;
+/* CAROUSEL CSS */
+/* .carousel-item > img {
+  object-fit: cover;
+  height: calc(100vh - 56px);
+  width: 100%;
+} */
+.carouselContainer{
+  background-color: #2bb7d017;
+  padding: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  z-index: 9999;
+  /* height: 1000px; */
+  width: 100%;
+ 
+  /* margin: 20px */
 }
+
 
 .footer{
   background-color: #2bb7d0;
