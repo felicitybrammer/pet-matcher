@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
-
+import Button from 'react-bootstrap/esm/Button';
 
 const Signup = () => {
     const [formState, setFormState] = useState({
@@ -39,12 +39,14 @@ const Signup = () => {
     };
   
     return (
-      <main className="flex-row justify-center mb-4">
-        <div className="col-12 col-md-6">
-          <div className="card">
+      <main className="flex-row justify-center mt-5">
+        <div className="moveSignCard">
+          <div className="card loginCard">
             <h4 className="card-header">Sign Up</h4>
+            <br/>
             <div className="card-body">
               <form onSubmit={handleFormSubmit}>
+              <h5>Your Name:</h5>
                 <input
                   className="form-input"
                   placeholder="Your name"
@@ -54,6 +56,9 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
+                <br />
+                <br />
+                <h5>Your Email:</h5>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -63,6 +68,9 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br />
+                <br />
+                <h5>Your Password:</h5>
                 <input
                   className="form-input"
                   placeholder="******"
@@ -72,9 +80,13 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button className="btn d-block w-100" type="submit">
-                  Submit
-                </button>
+                <br />
+                <br />
+                <div className="d-grid gap-2">
+                  <Button type="submit" variant="warning" size="lg">
+                    Submit
+                  </Button>
+                </div>
               </form>
   
               {error && <div>Signup failed</div>}
@@ -86,4 +98,7 @@ const Signup = () => {
   };
   
 export default Signup;
-  
+
+//<button className="btn d-block w-100" type="submit">
+// Submit
+// </button>
