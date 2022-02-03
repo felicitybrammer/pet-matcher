@@ -30,65 +30,69 @@ const UserProfile = () => {
                 // console.log(petAnswers);
 
                 if (questionName === '_id') {
-                    console.log(petAnswers);
+                   // console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'sex') {
-                    console.log(petAnswers);
+                   // console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'age') {
-                    console.log(petAnswers);
+                   // console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'category') {
-                    console.log(petAnswers);
+                   // console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'activity') {
-                    console.log(petAnswers);
+                   // console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'needs') {
-                    console.log(petAnswers);
+                   // console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'household') {
-                    console.log(petAnswers);
+                    //console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 } else if (questionName === 'otherPets') {
-                    console.log(petAnswers);
+                    //console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
                 }
 
             })
-            console.log(filteredPet);
+            //console.log(filteredPet);
             allFilteredPets.push(filteredPet)
         })
 
 
     }
-    console.log(allFilteredPets);
+   // console.log(allFilteredPets);
 
     //match the matched key values and add 1 for every same value
     const finalscore = []
-    for (let index = 0; index < allFilteredPets.length; index++) {
-        console.log('true')
+    if (answers){
+        for (let index = 0; index < allFilteredPets.length; index++) {
+        //console.log('true')
         let score = 0;
         //   console.log(answers);
         Object.keys(answers[0]).map((userAnswer) => {
-            console.log("whoop");
+            // console.log(userAnswer);
             const userValues = answers[0][userAnswer];
-            console.log("soup")
+            // console.log(userValues)
 
            Object.keys(allFilteredPets[index]).map((petLabels) => {
                 const petAnswers = allFilteredPets[index][petLabels];
-                console.log(petAnswers);
+                //console.log(petAnswers);
                 if(userAnswer===petLabels && userValues===petAnswers){
                     score++
                 }
             })           
         })
-         finalscore.push([allFilteredPets[index]._id, score])
+         finalscore.push({"_id": allFilteredPets[index]._id , "score": score})
 
     }
+}
+    
     console.log(finalscore);
 
-    //any number over 9 add to an array
+    //any number over 3 add to an array
+
     //render pet cards by mapping through array 
     return (
         <div>
