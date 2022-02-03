@@ -65,5 +65,23 @@ yellow #f5cb39 */
 
 .footerIcons{
   padding-left: 10px;
-  
+
+}
+
+/* CREATOR PAGE body*/
+.cardContainer{
+  background-color: #2bb7d017;
+  padding: 10px;
+  /* margin: 10px */
+}
+.creatorCard{
+  background-color: honeydew;
+}
+
+.cardBody {
+  text-align: center;
+}
+
+.creatorTitle{
+  text-align: center;
 }
