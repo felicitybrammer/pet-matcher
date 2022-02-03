@@ -72,7 +72,7 @@ yellow #f5cb39 */
 .cardContainer{
   background-color: #2bb7d017;
   padding: 10px;
-  /* margin: 10px */
+  /* margin: 20px */
 }
 .creatorCard{
   background-color: honeydew;
@@ -84,4 +84,6 @@ yellow #f5cb39 */
 
 .creatorTitle{
   text-align: center;
+  color: #128296;
+  font-weight: 200;
 }
