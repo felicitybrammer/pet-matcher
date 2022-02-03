@@ -8,22 +8,27 @@ const UserProfile = () => {
     const { loading: petLoading, data: petData } = useQuery(QUERY_PETS)
     const me = data?.me || {};
     console.log('profile:', me);
+    const answers = me.answers
 
     const pets = petData?.pets || [];
     console.log('profile:', pets);
-    // console.log(me.answers);
+
+    //latestQuiz
+
+
     //match answer key by mapping through pets
+
+    //all filtered pets ia an array full of objects of each pet
     const allFilteredPets = []
     if (pets, me) {
-        
-        pets.map((pet) => {
 
-            const filteredPet={}
+        pets.map((pet) => {
+            //filteredPet will hold a single object full of the pets question answer data to match with user
+            const filteredPet = []
             Object.keys(pet).map((questionName) => {
                 const petAnswers = pet[questionName];
-                
-                
                 // console.log(petAnswers);
+
                 if (questionName === '_id') {
                     console.log(petAnswers);
                     filteredPet[questionName] = (petAnswers)
@@ -51,14 +56,37 @@ const UserProfile = () => {
                 }
 
             })
-console.log(filteredPet);
-allFilteredPets.push(filteredPet)
+            console.log(filteredPet);
+            allFilteredPets.push(filteredPet)
         })
-        
-           
+
+
     }
-    //     //match the matched key values and add 1 for every same value
-console.log(allFilteredPets);
+    console.log(allFilteredPets);
+
+    //match the matched key values and add 1 for every same value
+    const finalscore = []
+    for (let index = 0; index < allFilteredPets.length; index++) {
+        console.log('true')
+        let score = 0;
+        //   console.log(answers);
+        Object.keys(answers[0]).map((userAnswer) => {
+            console.log("whoop");
+            const userValues = answers[0][userAnswer];
+            console.log("soup")
+
+           Object.keys(allFilteredPets[index]).map((petLabels) => {
+                const petAnswers = allFilteredPets[index][petLabels];
+                console.log(petAnswers);
+                if(userAnswer===petLabels && userValues===petAnswers){
+                    score++
+                }
+            })           
+        })
+         finalscore.push([allFilteredPets[index]._id, score])
+
+    }
+    console.log(finalscore);
 
     //any number over 9 add to an array
     //render pet cards by mapping through array 
