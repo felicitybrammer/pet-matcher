@@ -18,6 +18,10 @@ code {
   text-decoration: none;
   color: white;
 }
+.link2{
+  text-decoration: none;
+  color: blue;
+}
 .title{
   color: white;
 	font-size: 45px;
@@ -27,3 +31,97 @@ code {
 /* orange #ff824c
 blue #2bb7d0
 yellow #f5cb39 */
+
+.logoBtn{
+  padding-left: 10px;
+  max-inline-size: 140px;
+}
+.navBtn{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.navLogo{
+  justify-content: center;
+  position: relative;
+}
+/* 
+.loginBtn{
+  button: #ff824c;
+} */
+/* .loginCard{
+
+} */
+
+/* CAROUSEL CSS */
+/* .carousel-item > img {
+  object-fit: cover;
+  height: calc(100vh - 56px);
+  width: 100%;
+} */
+.carouselContainer{
+  background-color: #2bb7d017;
+  padding: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  z-index: 9999;
+  /* height: 1000px; */
+  width: 100%;
+ 
+  /* margin: 20px */
+}
+
+
+.footer{
+  background-color: #2bb7d0;
+  padding: 10px 20px 10px 20px;
+}
+
+/* .footerIcons{
+  padding-left: 20px;
+
+} */
+
+/* CREATOR PAGE body*/
+.cardContainer{
+  background-color: #2bb7d017;
+  padding: 10px;
+  /* margin: 20px */
+}
+.creatorCard{
+  background-color: honeydew;
+}
+
+.cardBody {
+  text-align: center;
+}
+
+.creatorTitle{
+  text-align: center;
+  color: #128296;
+  font-weight: 200;
+}
+
+.cardImage{
+  opacity: 0.33;
+}
+
+.captions{
+  /* background-color: #f1e4c0d2; */
+  /* background-color: #2bb7d09d; */
+  background-color: #1282968c;
+  color: black;
+  padding: 30px;
+  /* max-inline-size: 900px; */
+
+}
+
+.noBullet{
+  list-style: none;
+  text-indent: 10px;
+}
+
+.space{
+  text-indent: 10px;
+}
