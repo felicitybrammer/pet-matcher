@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { ADD_QUIZ } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 import { Button } from 'react-bootstrap';
 
 const Quiz = () => {
-    // const { data: { me: {} } } = useQuery(QUERY_ME);
-    const [addQuiz, { error }] = useMutation(ADD_QUIZ,{
-        update(cache, { data: { addQuiz } }) {
-            //update me object's cache
-            const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, answers: [addQuiz] } }
-            });
-        }  
-     } )
+     //const { data: { me: {name} } } = useQuery(QUERY_ME);
+    const [addQuiz, { error }] = useMutation(ADD_QUIZ)
+        // update(cache, { data: { addQuiz } }) {
+        //     //update me object's cache
+        //     const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
+        //     cache.writeQuery({
+        //         query: QUERY_ME,
+        //         data: { me: { ...me, answers: [addQuiz] } }
+        //     });
+        // }  
+    //  } )
        
     // const [addQuiz, { error }] = useMutation(ADD_QUIZ);
     const [quizAnswers, setQuizAnswers] = useState(
@@ -42,7 +43,7 @@ const Quiz = () => {
                 high: false
             },
             needs: {
-                needsTrue: false
+                true: false
             },
             household: {
                 babyHouse: false,
@@ -51,7 +52,7 @@ const Quiz = () => {
                 specialHouse: false
             },
             otherPets: {
-                otherTrue: false
+                true: false
             }
         }
     );
@@ -100,7 +101,7 @@ const Quiz = () => {
                 setQuizAnswers((prevState) => ({ ...prevState, activity: { ...prevState.activity, high: !prevState.activity.high } }))
                 break;
             case "needsTrue":
-                setQuizAnswers((prevState) => ({ ...prevState, needs: { ...prevState.needs, needsTrue: !prevState.needs.needsTrue } }))
+                setQuizAnswers((prevState) => ({ ...prevState, needs: { ...prevState.needs, true: !prevState.needs.needsTrue } }))
                 break;
             case "babyHouse":
                 setQuizAnswers((prevState) => ({ ...prevState, household: { ...prevState.household, babyHouse: !prevState.household.babyHouse } }))
@@ -115,7 +116,7 @@ const Quiz = () => {
                 setQuizAnswers((prevState) => ({ ...prevState, household: { ...prevState.household, specialHouse: !prevState.household.specialHouse } }))
                 break;
             case "otherTrue":
-                setQuizAnswers((prevState) => ({ ...prevState, otherPets: { ...prevState.otherPets, otherTrue: !prevState.otherPets.otherTrue } }))
+                setQuizAnswers((prevState) => ({ ...prevState, otherPets: { ...prevState.otherPets, true: !prevState.otherPets.otherTrue } }))
                 break;
             default:
                 break;
@@ -131,6 +132,9 @@ const Quiz = () => {
         questionAnswerLabel - the question text/label
         questionAnswerValue - the question value as a boolean
     */
+
+        let history = useHistory()
+
     const handleFormSubmit = async event => {
         event.preventDefault();
         console.log(quizAnswers)
@@ -141,9 +145,17 @@ const Quiz = () => {
             Object.keys(questionAnswers).map((questionAnswerLabel) => {
                 const questionAnswerValue = quizAnswers[questionName][questionAnswerLabel];
                 if (questionAnswerValue) {
-                    results[questionName].push(questionAnswerLabel);
+                    if(questionAnswerLabel==='true'){
+                        results[questionName] = (true);
+                    }else{
+                        results[questionName] = (questionAnswerLabel);
+                    }
+                    
+                    
                 }
             })
+            
+            history.push(`/profile/`)
 
             
         })

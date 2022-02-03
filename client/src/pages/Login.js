@@ -9,16 +9,7 @@ import Button from 'react-bootstrap/esm/Button';
 
 const Login = (props) => {
     const [formState, setFormState] = useState({ email: '', password: '' });
-    const [login, { error }] = useMutation(LOGIN_USER, {update(cache, { data: { login } }) {
-      console.log(cache);
-      //update me object's cache
-     
-      cache.writeQuery({
-          query: QUERY_ME,
-          data: { ...login} 
-      });
-    }}) 
-  
+    const [login, { error }] = useMutation(LOGIN_USER)
     // update state based on form input changes
     const handleChange = (event) => {
       const { name, value } = event.target;
@@ -29,8 +20,6 @@ const Login = (props) => {
       });
     };
     
-    
-
   
     // submit form
     const handleFormSubmit = async (event) => {
@@ -39,6 +28,7 @@ const Login = (props) => {
       try {
         const { data } = await login({
           variables: { ...formState },
+         
         });
   
         Auth.login(data.login.token);
@@ -52,6 +42,18 @@ const Login = (props) => {
         password: '',
       });
     };
+  //  const [login, { error }] = useMutation(LOGIN_USER, {update(cache, { data: { login } }) {
+     
+  //     //update me object's cache
+     
+  //     cache.writeQuery({
+  //         query: QUERY_ME,
+  //         data: { ...login} 
+  //     });
+  //      console.log(cache);
+  //   }})
+
+  
   
     return (
       <main className="flex-row justify-center mt-5">
