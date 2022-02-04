@@ -54,6 +54,8 @@ const typeDefs = gql`
     addPet(name: String!, description: String, image: String, location: String, sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): Pet
     addQuiz(sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): User
     updateQuiz( sex: String, age: String, category: String, activity: String, needs: Boolean, household: String, otherPets: Boolean): User
+    deleteQuiz(_id: ID): User
+    deleteAllQuiz: User
   }
 `;
 
