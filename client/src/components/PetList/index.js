@@ -70,8 +70,8 @@ const PetList = ({ pets, pet }) => {
                     <Card  className="cardz" key={pet._id} style={{ width: '25rem'}} border="info">
                         <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)} />
                         <Card.Body>
-                            <Card.Title>Hi, I'm {pet.name}</Card.Title>
-                            <Card.Text>
+                            <Card.Title style={{fontWeight:365, fontSize:30}}> Hi, I'm {pet.name}</Card.Title>
+                            <Card.Text style={{fontWeight:350, fontSize:20}}>
                                 {pet.sex}
                                 <br />
                                 {pet.age}

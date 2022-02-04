@@ -201,9 +201,21 @@ yellow #f5cb39 */
 } */
 
 .matchTitle{
-  color: #128296fb
+  color: #128296fb;
+  padding: 1rem;
 }
 
 /* .flex-column{
   background-color: yellow;
 } */
+
+.match{
+  display: inline-grid;
+  grid-template-columns: 25rem 25rem 25rem;
+  grid-gap: 20rem;
+}
+
+.petName{
+  font-weight: 900;
+  font-size: xx-large;
+}

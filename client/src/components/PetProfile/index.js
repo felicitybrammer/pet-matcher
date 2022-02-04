@@ -1,6 +1,6 @@
 //single pet's profile
 import React from 'react';
-
+import Card from 'react-bootstrap/Card'
 
 
 const Pet = ({ matches }) => {
@@ -11,40 +11,43 @@ const Pet = ({ matches }) => {
 
     return (
 
-        <div>
+        <div className="match mb-4">
             {matches &&
                 matches.map((pet) => (
-                    <div key={pet._id}>
-                        <h1>{pet.name}</h1>
-                        <div>
-                            <img src={require(`../../assets/petImages/${pet.image}`)} alt="cute pet"></img>
-                        </div>
-                        <div>
+                    <Card key={pet._id} style={{ width: '35rem'}} border="info" >
+                        
+                        
+                            <Card.Img varient="top" src={require(`../../assets/petImages/${pet.image}`)} alt="cute pet" />
+                        
+                        <Card.Body>
+                            <Card.Title className="petName" style={{fontWeight:500, fontSize:45}}>
+                            {pet.name}
+                        </Card.Title>
+                            <Card.Text>
                             <ul className="noBullet">
                                 <li>
-                                    Description: {pet.description}
+                                   <strong>Description:</strong>  {pet.description}
                                 </li>
                                 <li>
-                                    Location: {pet.location}
+                                <strong>  Location:</strong>  {pet.location}
                                 </li>
                                 <li>
-                                    Age: {pet.age}
+                                <strong> Age:</strong>  {pet.age}
                                 </li>
                                 <li>
-                                    Sex: {pet.sex}
+                                <strong>  Sex: </strong> {pet.sex}
                                 </li>
                                 <li>
-                                    Category: {pet.category}
+                                <strong> Category: </strong> {pet.category}
                                 </li>
                                 <li>
-                                    Activity: {pet.activity}
+                                <strong> Activity: </strong> {pet.activity}
                                 </li>
-                                <li>
-                                    Needs: {pet.needs}
-                                </li>
-                            </ul>
-                        </div>
-                    </div>))}
+                                </ul>
+                        </Card.Text>
+                        </Card.Body>
+                        
+                    </Card>))}
 
         </div>
     );

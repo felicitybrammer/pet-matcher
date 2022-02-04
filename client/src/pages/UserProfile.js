@@ -121,7 +121,7 @@ const UserProfile = () => {
     //render pet cards by mapping through array 
     return (
         <div>
-            <h1 className="matchTitle">Your Pet Matches!</h1>
+            <h1 className="matchTitle" style={{fontWeight:700, fontSize:80}}>Your Pet Matches!</h1>
             <div>
                 <Pet matches={matches} />
             </div>

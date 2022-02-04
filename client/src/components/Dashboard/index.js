@@ -16,7 +16,7 @@ const Dashboard = () => {
     return (
         <main>
             <div className="mb-2 quizBtn">
-            <Button variant="warning" size="lg" onClick={() => setQuizShow(true)}>Take The Quiz To Find Your Matches!</Button>
+            <Button variant="warning" style={{fontWeight:360, fontSize:45}} onClick={() => setQuizShow(true)}>Take The Quiz To Find Your Matches!</Button>
             </div>
             
             <Modal
