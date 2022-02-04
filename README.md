@@ -14,15 +14,10 @@ OkCreature has been designed to help potential adopters narrow the search for a 
 - Have a polished UI.
 - Be responsive.
 - Be interactive (i.e., accept and respond to user input).
-
-Include authentication (JWT).
-
-Protect sensitive API key information on the server.
-
-Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, quality comments, etc.).
-
-Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application)
-
+- Include authentication (JWT).
+- Protect sensitive API key information on the server.
+- Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, quality comments, etc.).
+- Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application)
 
 ## Motivation for Development
 
@@ -30,20 +25,58 @@ As we are currently in a pandemic, the rate of pets being bought and returned ha
 
 ## User Story
 
+I am looking to adopt a pet but I don’t want to spend time searching and clicking through large databases. 
+I want to be able to to enter my preferences and search criteria, and to have my results saved to my profile.
+I want to be able to come back to the webpage and have my results be saved in on my profile page.
+
 ## User Workflow
+
+WHEN I log in to my profile
+THEN I see a list of summary cards with photos for each pet
+WHEN I choose to take the matching quiz
+THEN I have the option to select my preferences by checking boxes
+WHEN I submit my quiz 
+THEN my best matches are displayed
+WHEN I log out and log back in
+THEN my matches are persistent
 
 ## Technologies Used
 
+- MongoDb
+- Express
+- React
+- Node.js
+- GraphQL
+- Apollo
+- JavaScript
+- React-bootstrap
+
 ## Wireframe
+
+
+
 
 ## Challenges
 
+- New skills and technologies - we chose a challenging project idea and had to work hard to find ways to solve problems that we had not encountered in lessons.
+- Reading documentation and Stack Overflow - sometimes helpful and sometimes way too much information!
+
 ## Successes
+
+- Planning: We planned extensively and did not move to work on the client side until our back end code was fully tested and complete
+- Collaboration: We worked together on all the initial code and planning
+- Communication: We communicated ALL the time
+- New Ideas: We got to try some new ideas and to try writing code that was different from the lessons
 
 ## Directions for Future Development
 
+
 ## Screenshots of Web Application
 
+
+
 ## Links
+
+
 
 ## Closing Remarks
