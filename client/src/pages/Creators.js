@@ -57,8 +57,7 @@ const About = () => {
                     <Card.Body className="cardBody">
                         <Card.Title className="creatorTitle">Makda Girmay</Card.Title>
                         <Card.Text style={{ fontSize: "10px" }}>
-                        hi im Makda, i have a love hate relationship with code and a hate hate relationship with apollo. when im not in front of a screen i sleep and eat and have nightmares about code, but i also like to read anything but code documentation and watch movies but i guess thats another screen.
-                        </Card.Text>
+                        Fledgling Web Developer Makda here, eager and excited to learn as much as I can about the world of full stack web development. I have a background in Business admin and Marketing, and am a freelance photographer on the side. I fell in love with programming over a year ago and haven't looked back but  when I'm not in front of a screen I read, bike, tend to my plants, and spend time with loved ones.                        </Card.Text>
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                             <Button variant="warning" icon={faGithub} href="https://github.com/maks-pixel" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></Button>
                             <Button variant="warning" icon={faLinkedin} href="https://www.linkedin.com/in/makda-girmay-a8b937b0/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></Button>
