@@ -8,7 +8,7 @@ OkCreature has been designed to help potential adopters narrow the search for a 
 
 ## Link
 
-- See our live application here: https://okcreature.herokuapp.com/
+- See our live application here: 
 
 ## Table of Contents
 - [Usage](#usage)
@@ -141,4 +141,4 @@ We would like to make this a Progressive Web Application by employing service wo
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 ## License
-This project is currently unlicensed but will be in the future.
+This project is unlicensed
