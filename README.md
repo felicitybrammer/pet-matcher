@@ -70,6 +70,12 @@ THEN my matches are persistent
 
 ## Directions for Future Development
 
+This project has a lot of potential for development as this is only the MVP. We would like to enhance the user experience by:
+
+- Allowing them to search for more pets
+- Adding matching percentages
+- Ability to retake the quiz
+
 
 ## Screenshots of Web Application
 
