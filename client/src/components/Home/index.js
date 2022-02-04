@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
+
 
 const Home = () => {
 
@@ -8,7 +10,7 @@ const Home = () => {
         <div className="carouselContainer">
             <Carousel fade>
                 <Carousel.Item interval={5000}>
-                    <img style={{opacity: 1}}
+                    <img style={{ opacity: 1 }}
                         className="d-block w-100 cardImg"
                         src={require("../../assets/images/funcat2.jpg")}
                         alt="kid with cat"
@@ -19,7 +21,7 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
-                    <img style={{opacity: 1}}
+                    <img style={{ opacity: 1 }}
                         className="d-block w-100"
                         src={require("../../assets/images/whitedogkiss2.jpg")}
                         alt="happy dog owner getting kisses"
@@ -30,7 +32,7 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img style={{opacity: 1.0}}
+                    <img style={{ opacity: 1.0 }}
                         className="d-block w-100"
                         src={require("../../assets/images/gecko2.jpg")}
                         alt="bearded lizard in hand"
@@ -42,16 +44,18 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
 
-            <div className="d-grid gap-2">
-                <Button variant="warning" size="lg">
-                    <strong>Join OkCreature to find your puurrrrrfect match!</strong>
-                </Button>
-            </div>
+
+            <Link className="link" to="/signup">
+                <div className="d-grid gap-2">
+                    <Button variant="warning" size="lg">
+                        <strong>Join OkCreature to find your puurrrrrfect match!</strong>
+                    </Button>
+                </div>
+            </Link>
+
 
 
         </div>
-
-
 
     )
 

@@ -15,7 +15,10 @@ const Dashboard = () => {
 
     return (
         <main>
-            <Button variant="primary" onClick={() => setQuizShow(true)}>Take The Quiz To Find Your Matches!</Button>
+            <div className="mb-2 quizBtn">
+            <Button variant="warning" size="lg" onClick={() => setQuizShow(true)}>Take The Quiz To Find Your Matches!</Button>
+            </div>
+            
             <Modal
                 size="lg"
                 show={quizShow}

@@ -41,7 +41,8 @@ const About = () => {
                     <Card.Body className="cardBody">
                         <Card.Title className="creatorTitle">Michelle Nijjar</Card.Title>
                         <Card.Text style={{ fontSize: "10px" }}>
-                            Kinesiologist turned Web Developer here! I am on track to earn a Full-Stack Web Development certificate from the University of Toronto's School of Continuing Studies. I completed a Bachelor of Science in Human Kinetics and have experience working withinin Brain Injury rehab: specifically focused on return-to-work and improving quality of life treatment. With a passion for healthcare, I am in pursuit of furthering my skillset in a unique way by levering technology to one day improve lives. When I'm not in front of screens, I enjoy DIY-ing things around the house, gardening, exploring the world and making memories with friends and family.                            </Card.Text>
+                        Hey there! I'm Michelle and I graduated University majoring in Finance! As working in the financial industry for 3 years, I had realized it was not the job for me ..and that's what brought me to learn full stack web development! I love challenging myself to solve problems while being able to utilize my creative side! When I'm not in front of screens, I love to bring out my artsy side by painting abstract photos.                               
+                        </Card.Text>
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                             <Button variant="warning" icon={faGithub} href="https://github.com/mnijjar24" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></Button>
                             <Button variant="warning" icon={faLinkedin} href="" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></Button>
@@ -70,7 +71,7 @@ const About = () => {
                     <Card.Body className="cardBody">
                         <Card.Title className="creatorTitle">Ravneet Panglia</Card.Title>
                         <Card.Text style={{ fontSize: "10px" }} >
-                            Kinesiologist turned Web Developer here! I am on track to earn a Full-Stack Web Development certificate from the University of Toronto's School of Continuing Studies. I completed a Bachelor of Science in Human Kinetics and have experience working withinin Brain Injury rehab: specifically focused on return-to-work. With a passion for healthcare, I am in pursuit of furthering my skillset in a unique way by levering technology to improve lives. When I'm not in front of screens, I enjoy DIY-ing things around the house, gardening, exploring the world and making memories with friends and family.
+                            Kinesiologist turned Web Developer here! I have experience working within Brain Injury rehab: specifically focused on return-to-work and quality of life treatment. With a passion for healthcare, I am in pursuit of furthering my skillset in a unique way by levering technology to improve lives. When I'm not in front of screens, I enjoy DIY-ing things around the house, gardening, exploring the world and making memories with friends and family.
                         </Card.Text>
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                             <Button variant="warning" icon={faGithub} href="https://github.com/rpanglia" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></Button>
