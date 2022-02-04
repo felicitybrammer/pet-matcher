@@ -1,8 +1,39 @@
-## Welcome to the Pet Matcher
+# OkCreature
 
 ## Objective
 
 OkCreature has been designed to help potential adopters narrow the search for a pet. The matching feature allows users to filter our pet database based their lifestyle, their preferences and the level of care that they are able to provide. 
+
+## Link
+
+- See our live application here: 
+
+## Table of Contents
+- [Usage](#usage)
+- [Application Requirements](#application-requirements)
+- [Motivation for Development](#motivation-for-development)
+- [User Story](#user-story)
+- [User Workflow](#user-workflow)
+- [Technologies Used](#technologies-used)
+- [Challenges](#challenges)
+- [Successes](#successes)
+- [Directions for Future Development](#directions-for-future-development)
+- [Screenshots](#screenshots)
+- [Contributors](#contributors)
+- [Learn More](#learn-more)
+- [License](#license)
+
+## Usage
+### Web Application
+1. Install the npm packages using the command: "npm install" or "npm i"
+2. Start OkCreature application via "npm run develop"
+3. OkCreature will open a new new broswer window at https://localhost:3001
+
+### Server Side
+1. Navigate to server directory using the command: "cd server"
+2. Install npm packages via "npm i"
+3. Start up the server with "npm run watch"
+4. Go to https://localhost3001/graphql to test the mutations and queries
 
 ## Application Requirements
 
@@ -51,11 +82,6 @@ THEN my matches are persistent
 - JavaScript
 - React-bootstrap
 
-## Wireframe
-
-
-
-
 ## Challenges
 
 - New skills and technologies - we chose a challenging project idea and had to work hard to find ways to solve problems that we had not encountered in lessons.
@@ -70,19 +96,47 @@ THEN my matches are persistent
 
 ## Directions for Future Development
 
-This project has a lot of potential for development as this is only the MVP. We would like to enhance the user experience by:
+This project has a lot of potential for development as this is only the MVP. 
 
-- Allowing them to search for more pets
-- Adding matching percentages
-- Ability to retake the quiz
+We would like to enhance the user experience by…
+
+* Allowing searches more pets by filtering search criteria
+* Ability to retake the quiz and update match results
+* The option to save pets to a list of favourites 
+* Displaying matching percentages on result page
+* Allow selection of multiple answers per question*
+
+Scalability would be an important focus of future development. Current matching functionality works with a smaller database of pets.
+
+We would like to make this a Progressive Web Application by employing service workers AND provide users with the opportunity to make charitable donations to local animal shelters through our application via the Stripe payment platform.
 
 
-## Screenshots of Web Application
+## Screenshots
+![home](/client/src/assets/images/home.jpg)
+![signup](/client/src/assets/images/signup.jpg)
+![landing](/client/src/assets/images/landing.jpg)
+![quiz](/client/src/assets/images/quiz.jpg)
 
 
+## Contributors
+### Please feel free to contact us with any questions
 
-## Links
+* Felicity Brammer | 
+  Contact email: felicitybrammer@gmail.com |
+  GitHub: [felicitybrammer](https://github.com/felicitybrammer)
+* Ravneet Panglia |
+  Contact email: ravneetpanglia@gmail.com |
+  GitHub: [rpanglia](https://github.com/rpanglia)
+* Makda Girmay |
+  Contact email: makdagirmay4@gmail.com |
+  GitHub: [maks-pixel](https://github.com/maks-pixel)
+* Michelle Nijjar |
+  Contact email: michellenijjar@hotmail.com |
+  GitHub: [mnijjar24](https://github.com/mnijjar24)
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Closing Remarks
+## License
+This project is unlicensed
