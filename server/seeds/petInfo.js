@@ -284,7 +284,7 @@
     {
         "name": "Sam",
         "description": "Ex-sled dog. Alaskan husky. Very active and sweet. Loves to run and roll in snow. Submissive around other dogs. Unsure about children. A cheese stealer.",
-        "image":"Sam2.jpg",
+        "image":"Sam4.jpeg",
         "location": "Dawson City",
          
             "sex": "male",
