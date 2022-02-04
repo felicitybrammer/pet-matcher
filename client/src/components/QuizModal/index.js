@@ -183,7 +183,7 @@ const Quiz = () => {
 
         <div>
             <form onSubmit={handleFormSubmit}>
-
+            <h6>Only Pick One answer per question</h6>
                 <p>Would you prefer a pet of a particular sex?</p>
                 <ul className="noBullet">
                     <li>
