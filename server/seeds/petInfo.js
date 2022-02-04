@@ -19,7 +19,7 @@
     "name": "Keelah",
     "description": "Miami street dog. Speedy and snuggly.",
     "image":"Keelah.jpeg",
-    "location": "Vancouver",
+    "location": "Venice",
        
             "sex": "female",
             "age": "senior",
@@ -57,7 +57,7 @@
             "category":"Dog",
             "activity": "high", 
             "needs": false, 
-            "household": ["baby", "child"],  
+            "household": "baby",  
             "otherPets": false
           
     },
@@ -125,7 +125,7 @@
         "name": "Brother Cat",
         "description": "as wide eyed and sincere as his sister is sinister. Basically a yellow lab puppy in a snazzy ginger suit. So handsome. Kinda of a Himbo. Stands beside you while you're cooking and gently takes snacks off the counter with his paws.",
         "image":"Brother5.jpeg",
-        "location": "Victoria",
+        "location": "Victorias",
        
             "sex": "male",
             "age": "adult",
@@ -141,7 +141,7 @@
         "name": "Sabine",
         "description": "the Goblin Queen. AKA Sharkberry. Sharpest kitten in existence. Insists on being domesticated. Has zero space boundaries and will steal the croissant right out of your hands. Unexpectedly affectionate, often while looking disgusted with you.",
         "image":"Sabine.jpeg",
-        "location": "Victoria",
+        "location": "Malton",
           
             "sex": "female",
             "age": "young adult",
@@ -173,7 +173,7 @@
         "name": "Marty",
         "description": "English Bulldog and likely Boxer mixed, 8 yrs old, deaf from birth, knows sign language, loves bum scratches, arm chair snuggles and destroying stuffies. Very food motivated.",
         "image":"Marty.jpeg",
-        "location": "Vancouver",
+        "location": "Oakville",
          
             "sex": "male",
             "age": "adult",
@@ -189,7 +189,7 @@
         "name": "Pippa",
         "description": "Pippa, English Bulldog,  was born with Spina Bifida, is incontinent, will be a diaper baby for life, very vocal when she wants attention (especially when she wants her diaper changed), loves to eat momma’s expensive shoes, runs very fast (especially after being caught eating momma’s expensive shoes).",
         "image":"Pippa.jpeg",
-        "location": "Vancouver",
+        "location": "Guelph",
           
             "sex": "female",
             "age": "young adult",
@@ -221,7 +221,7 @@
         "name": "Merrick",
         "description": "loves people - especially young people! Merrick (Rottie) is super gentle and just wants butt scratches. Walks, tug play and good dog bones preferred!",
         "image":"Merrick-Pip.jpeg",
-        "location": "Whitehorse",
+        "location": "Cambridge",
         
           
             "sex": "male",
@@ -237,8 +237,8 @@
     {
         "name": "Pip",
         "description": "loves people - especially young people! Pip (Mini Schnauzer) is mostly a one person dog but will tolerate loving ‘smooches’. Walks, tug play and good dog bones preferred!",
-        "image":"Merrick-Pip.jpeg",
-        "location": "Whitehorse",
+        "image":"Merric-Pip.jpeg",
+        "location": "Georgetown",
          
             "sex": "female",
             "age": "senior",
@@ -254,7 +254,7 @@
         "name": "Koda",
         "description": "outgoing, loves bananas, hates the crate, perfect date would be chasing each other through the woods before sharing a swampy dip in the local pond",
         "image":"Koda.jpeg",
-        "location": "Whitehorse",
+        "location": "Orangeville",
          
             "sex": "female",
             "age": "baby",
@@ -270,22 +270,22 @@
         "name": "Ellie",
         "description": "floofy and serene",
         "image":"Ellie.jpeg",
-        "location": "Vancouver",
+        "location": "Milton",
         
             "sex": "female",
             "age": "adult",
             "category":"Cat",
             "activity": "moderate", 
             "needs": false, 
-            "household": adult,  
+            "household": "adult",
             "otherPets": true
             
     },
     {
         "name": "Sam",
         "description": "Ex-sled dog. Alaskan husky. Very active and sweet. Loves to run and roll in snow. Submissive around other dogs. Unsure about children. A cheese stealer.",
-        "image":"Sam2.jpeg",
-        "location": "Whitehorse",
+        "image":"Sam2.jpg",
+        "location": "Dawson City",
          
             "sex": "male",
             "age": "adult",
@@ -301,7 +301,7 @@
         "name": "Mia",
         "description": "Sedentary senior who loves to sleep on heated blankets all day. Solar powered.",
         "image":"Mia.jpeg",
-        "location": "Whitehorse",
+        "location": "Calgary",
            
             "sex": "female",
             "age": "senior",
@@ -317,7 +317,7 @@
         "name": "Emma",
         "description": "Crested gecko. Loves to climb and leap into the abyss.",
         "image":"Emma.jpeg",
-        "location": "Whitehorse",
+        "location": "Edmonton",
         
           
             "sex": "female",
@@ -334,7 +334,7 @@
         "name": "Lou",
         "description": "Lou enjoys escaping, exploring inconvenient places, playing hide-and-seek (for months, if possible), and committing wanton acts of destruction. Enthusiastic but terrible climber. Approximately 15 years old.",
         "image":"Lou2.jpeg",
-        "location": "Whitehorse",
+        "location": "Banff",
           
             "sex": "male",
             "age": "adult",
@@ -366,7 +366,7 @@
         "name": "Douglas Fur",
         "description": "A barn rescue. Very food motivated",
         "image":"DouglasFur.jpeg",
-        "location": "Halifax",
+        "location": "Dartmouth",
         
   
             "sex": "male",
@@ -383,7 +383,7 @@
         "name": "Jerome",
         "description": "Terrier rescue. Very sweet and shy. Hates cold weather",
         "image":"Jerome.jpeg",
-        "location": "Halifax",
+        "location": "Beechville",
          
             "sex": "male",
             "age": "young adult",
@@ -399,7 +399,7 @@
         "name": "Dick",
         "description": "Opinionated cockatiel. Loves to tear up cardboard and shriek. Will dance along to Dolly Parton.",
         "image":"Dick.jpeg",
-        "location": "Halifax",
+        "location": "Spryfield",
         
             "sex": "male",
             "age": "adult",
@@ -415,7 +415,7 @@
         "name": "Andrew",
         "description": "Quirky parrot. Prefers not to sit on your hand",
         "image":"Andrew.jpeg",
-        "location": "Halifax",
+        "location": "Truro",
        
             "sex": "male",
             "age": "adult",
@@ -431,7 +431,7 @@
         "name": "Gayle",
         "description": "Shy and quiet. Doesn't like to be caged.",
         "image":"Gayle.jpeg",
-        "location": "Halifax",
+        "location": "Yarmouth",
         
           
             "sex": "female",
@@ -445,10 +445,10 @@
         
     },
     {
-        "name": "Frankie",
+        "name": "Franky",
         "description": "Princess parrot who loves to sit on your head",
         "image":"FrankieBird.jpeg",
-        "location": "Halifax",
+        "location": "Sydney",
           
             "sex": "female",
             "age": "adult",
