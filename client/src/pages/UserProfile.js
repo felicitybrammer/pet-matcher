@@ -71,20 +71,24 @@ const UserProfile = () => {
             //console.log('true')
             let score = 0;
             //   console.log(answers);
-            Object.keys(answers[0]).map((userAnswer) => {
-                // console.log(userAnswer);
-                const userValues = answers[0][userAnswer];
-                // console.log(userValues)
-
+            answers.map((userAnswer) => {
+                console.log(userAnswer);
+                Object.keys(userAnswer).map((userAnsLabelz)=>{
+                    console.log(userAnsLabelz);
+                    const userValues = userAnswer[userAnsLabelz]
                 Object.keys(allFilteredPets[index]).map((petLabels) => {
                     const petAnswers = allFilteredPets[index][petLabels];
-                    //console.log(petAnswers);
-                    if (userAnswer === petLabels && userValues === petAnswers) {
+                    console.log(petAnswers);
+                    if (userAnsLabelz === petLabels && userValues === petAnswers) {
                         score++
                     }
                 })
-            })
-            finalScore.push({ "_id": allFilteredPets[index]._id, "score": score })
+        })
+
+            
+             finalScore.push({ "_id": allFilteredPets[index]._id, "score": score })
+
+        })
 
         }
     }
