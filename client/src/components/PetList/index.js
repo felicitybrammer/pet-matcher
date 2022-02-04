@@ -62,7 +62,7 @@ const PetList = ({ pets, pet }) => {
 
 
     return (
-        <div className="cards" >
+        <div className="cards mb-4" >
             
             {pets &&
                 pets.map((pet) => (

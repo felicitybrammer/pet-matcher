@@ -109,11 +109,12 @@ yellow #f5cb39 */
 }
 
 .captions{
-  /* background-color: #f1e4c0d2; */
-  /* background-color: #2bb7d09d; */
-  background-color: #1282968c;
+  /* background-color: #f1e4c0a2; */
+  /* background-color: #2bb7d057; */
+  /* background-color: #1282968c; */
   color: black;
   padding: 30px;
+  
   /* max-inline-size: 900px; */
 
 }
@@ -158,6 +159,7 @@ yellow #f5cb39 */
 .container{
   justify-content: center;
   text-align: center;
+  /* background-color: #2bb7d028; */
   /* margin-right: auto;
   margin-left: auto; */
 }
@@ -196,4 +198,12 @@ yellow #f5cb39 */
 
 /* .cardz{
   
+} */
+
+.matchTitle{
+  color: #128296fb
+}
+
+/* .flex-column{
+  background-color: yellow;
 } */

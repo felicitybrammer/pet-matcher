@@ -6,7 +6,7 @@ const UserProfile = () => {
 
     return (
         <div>
-            <h1>Your Pet Matches!</h1>
+            <h1 className="matchTitle">Your Pet Matches!</h1>
             <div>
               
             </div>
