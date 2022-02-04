@@ -1,8 +1,6 @@
 //single pet's profile
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_PET } from '../../utils/queries';
+
 
 
 const Pet = ({ matches }) => {
@@ -22,7 +20,7 @@ const Pet = ({ matches }) => {
                             <img src={require(`../../assets/petImages/${pet.image}`)} alt="cute pet"></img>
                         </div>
                         <div>
-                            <ul className="">
+                            <ul className="noBullet">
                                 <li>
                                     Description: {pet.description}
                                 </li>

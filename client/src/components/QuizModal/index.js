@@ -6,18 +6,18 @@ import { QUERY_ME } from '../../utils/queries';
 import { Button } from 'react-bootstrap';
 
 const Quiz = () => {
-     //const { data: { me: {name} } } = useQuery(QUERY_ME);
+    //const { data: { me: {name} } } = useQuery(QUERY_ME);
     const [addQuiz, { error }] = useMutation(ADD_QUIZ)
-        // update(cache, { data: { addQuiz } }) {
-        //     //update me object's cache
-        //     const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
-        //     cache.writeQuery({
-        //         query: QUERY_ME,
-        //         data: { me: { ...me, answers: [addQuiz] } }
-        //     });
-        // }  
+    // update(cache, { data: { addQuiz } }) {
+    //     //update me object's cache
+    //     const { me } = cache.readQuery({ query: QUERY_ME }); //this is null. why??
+    //     cache.writeQuery({
+    //         query: QUERY_ME,
+    //         data: { me: { ...me, answers: [addQuiz] } }
+    //     });
+    // }  
     //  } )
-       
+
     // const [addQuiz, { error }] = useMutation(ADD_QUIZ);
     const [quizAnswers, setQuizAnswers] = useState(
         {
@@ -133,7 +133,7 @@ const Quiz = () => {
         questionAnswerValue - the question value as a boolean
     */
 
-        let history = useHistory()
+
 
     const handleFormSubmit = async event => {
         event.preventDefault();
@@ -145,19 +145,19 @@ const Quiz = () => {
             Object.keys(questionAnswers).map((questionAnswerLabel) => {
                 const questionAnswerValue = quizAnswers[questionName][questionAnswerLabel];
                 if (questionAnswerValue) {
-                    if(questionAnswerLabel==='true'){
+                    if (questionAnswerLabel === 'true') {
                         results[questionName] = (true);
-                    }else{
+                    } else {
                         results[questionName] = (questionAnswerLabel);
                     }
-                    
-                    
+
+
                 }
             })
-            
-            history.push(`/profile/`)
 
-            
+
+
+
         })
         console.log('results:', results)
 
@@ -174,6 +174,9 @@ const Quiz = () => {
         } catch (error) {
             console.log(error);
         }
+        alert("Great Job! Check out your matches in your profile")
+
+        // history.push(`/profile/`)
     }
 
     return (
@@ -270,11 +273,12 @@ const Quiz = () => {
                 </ul>
 
                 <br />
-                <input type="checkbox" value="needsTrue" onChange={handleChange} />
+
+                <input type="checkbox" value="needs" onChange={handleChange} />
                 <label className="space" for="needs">Yes, I would consider a pet with special needs</label>
                 <br />
                 <br />
-                <input type="checkbox" value="otherTrue" onChange={handleChange} />
+                <input type="checkbox" value="otherPets" onChange={handleChange} />
                 <label className="space" for="otherPets">Yes, I have other pets living with me</label>
 
             </form>
