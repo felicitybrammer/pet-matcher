@@ -1,5 +1,10 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import CardGroup from 'react-bootstrap/CardGroup';
+
+
 // import Button from 'react-bootstrap/Button';
 // import Pet from "../PetProfile";
 // import { Link } from 'react-router-dom';
@@ -57,13 +62,13 @@ const PetList = ({ pets, pet }) => {
 
 
     return (
-        <div>
-
-
+        <div className="cards" >
+            
             {pets &&
                 pets.map((pet) => (
-                    <Card key={pet._id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)}/>
+
+                    <Card  className="cardz" key={pet._id} style={{ width: '25rem'}} border="info">
+                        <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)} />
                         <Card.Body>
                             <Card.Title>Hi, I'm {pet.name}</Card.Title>
                             <Card.Text>
@@ -71,14 +76,80 @@ const PetList = ({ pets, pet }) => {
                                 <br />
                                 {pet.age}
                             </Card.Text>
-                            {/* <Button key={pet.name} onClick={() => handlePetProfileShow(pet)}>See {pet.name}'s Profile</Button> */}
-
+                            {  /* <Button key={pet.name} onClick={() => handlePetProfileShow(pet)}>See {pet.name}'s Profile</Button> */}
                         </Card.Body>
-                    </Card>)
-                )}
-                
+                    </Card>
+
+                ))}
         </div>
     )
 }
 
 export default PetList;
+
+// Original
+// <Card  key={pet._id} style={{ width: '18rem' }} border="info">
+//     <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)}/>
+//     <Card.Body>
+//         <Card.Title>Hi, I'm {pet.name}</Card.Title>
+//         <Card.Text>
+//             {pet.sex}
+//             <br />
+//             {pet.age}
+//         </Card.Text>
+//         {/* <Button key={pet.name} onClick={() => handlePetProfileShow(pet)}>See {pet.name}'s Profile</Button> */}
+
+//     </Card.Body>
+// </Card>
+
+
+
+
+
+//  <div>
+
+//     {pets &&
+//         pets.map((pet) => (
+
+//             <Row xs={1} md={2} className="g-4">
+//                 {Array.from({ length: 4 }).map((_, idx) => (
+//                     <Col>
+//                         <Card key={pet._id} style={{ width: '18rem' }} border="info">
+//                             <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)} />
+//                             <Card.Body>
+//                                 <Card.Title>Hi, I'm {pet.name}</Card.Title>
+//                                 <Card.Text>
+//                                     {pet.sex}
+//                                     <br />
+//                                     {pet.age}
+//                                 </Card.Text>
+// //                                 {  /* <Button key={pet.name} onClick={() => handlePetProfileShow(pet)}>See {pet.name}'s Profile</Button> */}
+// //                             </Card.Body>
+// //                         </Card>
+// //                     </Col>
+//                 ))}
+//             </Row>
+//         ))}
+// </div> */}
+
+
+// <div>
+
+// {pets &&
+//     pets.map((pet) => (
+//         <CardGroup className="card-body" style={{ display: 'flex', flexDirection: 'row'}}>
+//             <Card key={pet._id} style={{ width: '18rem' }} border="info">
+//                 <Card.Img variant="top" src={require(`../../assets/petImages/${pet.image}`)} />
+//                 <Card.Body>
+//                     <Card.Title>Hi, I'm {pet.name}</Card.Title>
+//                     <Card.Text>
+//                         {pet.sex}
+//                         <br />
+//                         {pet.age}
+//                     </Card.Text>
+//                     {  /* <Button key={pet.name} onClick={() => handlePetProfileShow(pet)}>See {pet.name}'s Profile</Button> */}
+//                 </Card.Body>
+//             </Card>
+//         </CardGroup>
+//     ))}
+// </div>
