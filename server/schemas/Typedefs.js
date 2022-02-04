@@ -2,7 +2,7 @@ const {gql} = require('apollo-server-express');
 
 const typeDefs = gql`
     type User {
-    _id: ID
+    _id: ID!
     name: String
     email: String
     answers: [Quiz]
@@ -29,7 +29,7 @@ const typeDefs = gql`
     sex: String
     age: [String]
     category: [String]
-    activity: [String]
+    activity: String
     needs: Boolean
     household: [String]
     otherPets: Boolean

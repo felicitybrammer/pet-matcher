@@ -52,6 +52,7 @@ const resolvers = {
 
           return updateUser;
         },
+        
         login: async (parent, { email, password }) => {
           const user = await User.findOne({ email });
     

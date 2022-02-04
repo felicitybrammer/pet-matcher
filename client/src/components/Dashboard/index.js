@@ -9,7 +9,7 @@ import Quiz from '../QuizModal';
 const Dashboard = () => {
     const { loading, data } = useQuery(QUERY_PETS);
     const pets = data?.pets || [];
-    console.log(pets);
+    console.log('Dashboard:', pets);
 
     const [quizShow, setQuizShow] = useState(false)
 
