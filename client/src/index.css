@@ -72,7 +72,7 @@ yellow #f5cb39 */
 .footer{
   background-color: #2bb7d0;
   padding: 10px 20px 10px 20px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -109,11 +109,12 @@ yellow #f5cb39 */
 }
 
 .captions{
-  /* background-color: #f1e4c0d2; */
-  /* background-color: #2bb7d09d; */
-  background-color: #1282968c;
+  /* background-color: #f1e4c0a2; */
+  /* background-color: #2bb7d057; */
+  /* background-color: #1282968c; */
   color: black;
   padding: 30px;
+  
   /* max-inline-size: 900px; */
 
 }
@@ -158,8 +159,9 @@ yellow #f5cb39 */
 .container{
   justify-content: center;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  /* background-color: #2bb7d028; */
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 .moveCard{
@@ -169,3 +171,39 @@ yellow #f5cb39 */
 .moveSignCard{
   padding: 100px;
 }
+
+/* DASHBOARD PAGE */
+.quizBtn{
+  padding: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* .petListCards{
+  justify-content: space-evenly;
+} */
+
+/* .card-body {
+  justify-content: space-between;
+  align-items: center;
+  
+} */
+
+.cards {
+  display: inline-grid;
+  grid-template-columns: 25rem 25rem 25rem;
+  grid-gap: 3rem;
+
+}
+
+/* .cardz{
+  
+} */
+
+.matchTitle{
+  color: #128296fb
+}
+
+/* .flex-column{
+  background-color: yellow;
+} */
