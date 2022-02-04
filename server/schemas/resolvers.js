@@ -52,6 +52,15 @@ const resolvers = {
 
           return updateUser;
         },
+        deleteQuiz: async(parent, context) =>{
+          const updateUser = await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $pull: { answers: { sex, age, category, activity, needs, household, otherPets} } },
+            { new: true }
+          );
+
+          return updateUser;
+        },
         login: async (parent, { email, password }) => {
           const user = await User.findOne({ email });
     
