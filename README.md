@@ -1,3 +1,5 @@
+![logo](/client/src/assets/images/clear8.jpg) 
+
 # OkCreature
 
 ## Objective
