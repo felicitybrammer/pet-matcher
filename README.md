@@ -8,7 +8,7 @@ OkCreature has been designed to help potential adopters narrow the search for a 
 
 ## Link
 
-- See our live application here: https://okcreature/herokuapp.com
+- See our live application here: https://okcreature.herokuapp.com
 
 ## Table of Contents
 - [Usage](#usage)
