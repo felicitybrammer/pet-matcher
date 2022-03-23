@@ -6,19 +6,12 @@
 
 See it live here: https://okcreature.herokuapp.com
 
-## Description
-
 A personalized matching app for pets and potential adopters. Users can take a quiz to match them with pets from the database based on lifestyle, household, preferences or ability to provide care.
 
 ## My Role
 
 One of my best team experiences! 
 We executed a well-planned project using agile methodologies and with frequent communications. My role was to build and test the back-end functionality, to create JWT authentication on the server and client side, and to integrate state management with React hooks.
-
-## Objective
-
-OkCreature has been designed to help potential adopters narrow the search for a pet. The matching feature allows users to filter our pet database based their lifestyle, their preferences and the level of care that they are able to provide. 
-
 
 ## Table of Contents
 - [Usage](#usage)
