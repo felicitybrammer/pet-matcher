@@ -12,7 +12,8 @@ A personalized matching app for pets and potential adopters. Users can take a qu
 
 ## My Role
 
-One of my best team experiences! We executed a well-planned project using agile methodologies and with frequent communications.My role was to build and test the back-end functionality, to create JWT authentication on the server and client side, and to integrate state management with React hooks.
+One of my best team experiences! 
+We executed a well-planned project using agile methodologies and with frequent communications. My role was to build and test the back-end functionality, to create JWT authentication on the server and client side, and to integrate state management with React hooks.
 
 ## Objective
 
